@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
 
 /*===COLOR===
 Bleu : #4870cf
@@ -11,9 +11,13 @@ html{
     width: 100%;
 }
 body{
-    width: 1080px;
-    margin:0 auto;
     font-family: 'Raleway', sans-serif;
+}
+.content{
+    position:rel
+    min-width:800px;
+    max-width: 1080px;
+    margin:0 auto;
 }
 
 /*=========================
@@ -57,5 +61,5 @@ h2{
     display: inline-block;
     width: 20%;
     height: 200px;
-    background-color: red;
+    background-color: #4870cf;
 }
