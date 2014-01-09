@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="css/reset.css"/>
-        <link type="text/css" rel="stylesheet" href="css/style.css"/>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>◭ PeakCSS - Home</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-    </head>
-    <body>
+<?php 
+    require "header.php";
+?>
         <div id="HowUse">
             <div class="content">
                 <h2>How to use ?</h2>
@@ -36,5 +27,6 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+<?php
+    require "footer.php";
+?>
