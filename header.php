@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PeakCSS - FrameWork CSS - Create your own CSS - Select, custom, generate CSS</title>
-        <link href="style.css" rel="stylesheet"/>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,100' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet" href="css/reset.css"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>◭ PeakCSS - Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
     </head>
     <body>
         <header>
