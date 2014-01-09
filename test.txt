@@ -5,3 +5,7 @@ Ligne simon 2
 
 Nouvel essai
 
+fonction test(){
+	echo 'Allo, non mais allo ?';
+};
+
