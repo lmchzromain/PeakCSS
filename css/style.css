@@ -7,13 +7,13 @@ Bleu : #4870cf
 /*=========================
 BODY
 ==========================*/
-body{
-    font-family: 'Raleway', sans-serif;
+html{
+    width: 100%;
 }
-.content{
-    position:relative;
+body{
     width: 1080px;
     margin:0 auto;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*=========================
@@ -32,18 +32,17 @@ h2{
     font-style:italic;
 }
 .right{
-    position:absolute;
-    right:0;
+    float:right;
 }
 .text{
     display: inline-block;
-    width: 800px;
+    width: 75%;
     height: 200px;
 }
 .text h3{
     margin-top: 10px;
     color:#3f3f3f;
-    font-size:38px;
+    font-size:40px;
     font-weight:300;
 }
 .text p{
@@ -56,7 +55,7 @@ h2{
 }
 .pic{
     display: inline-block;
-    width: 250px;
+    width: 20%;
     height: 200px;
     background-color: red;
 }
