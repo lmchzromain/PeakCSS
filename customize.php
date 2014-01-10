@@ -2,7 +2,7 @@
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<link rel="stylesheet" type="text/css" href="style.css">
+			<link rel="stylesheet" type="text/css" href="./css/style.css">
 			<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 			<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
@@ -23,7 +23,7 @@
 		</head>
 
 		<body>
-			<?php include 'menu.php'; ?>
+			<?php include 'header.php'; ?>
 
 			<div id="choice_box">
 				<div class="choice">
