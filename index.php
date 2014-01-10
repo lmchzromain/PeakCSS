@@ -27,6 +27,18 @@
                 </div>
             </div>
         </div>
+        <div id="explore">
+            <div class="content">
+                <h2>Explore his capacities</h2>
+                <h5 id="discover">Discover of numerous framework created by the community by means of PeakCSS.</h5>
+                <div id="presentation">
+                    <div class="example" id="example1"></div>
+                    <div class="example" id="example2"></div>
+                    <div class="example" id="example3"></div>
+                </div>
+                <a href="#" id="bt_explore">Explore</a>
+            </div>
+        </div>
 <?php
     require "footer.php";
 ?>
