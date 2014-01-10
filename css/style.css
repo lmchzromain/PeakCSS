@@ -52,7 +52,7 @@ a{
 
 html{width: 100%;background-color: #FFF;}
 body{margin: auto;position:relative;font-family: 'Raleway', sans-serif;}
-.content{max-width:1080px; min-width:800px;margin:auto;position:relative;}
+.content{max-width:75%; min-width:800px;margin:auto;position:relative;}
 /******** Header ********/
 header{
 	background-color: #fff;
