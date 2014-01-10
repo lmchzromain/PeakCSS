@@ -8,6 +8,22 @@
         <title>◭ PeakCSS - Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+            <script type='text/javascript'>
+                // On attend que la page soit chargée 
+                $(document).ready(function(){
+                   // On cache la zone de texte
+                   $('#toggle').hide();
+                   // toggle() lorsque le lien avec l'ID #toggler est cliqué
+                   $('a#toggler').click(function()
+                  {
+                      $('#toggle').toggle(400);
+                      return false;
+                   });
+                });
+                
+        </script>
     </head>
     <body>
         <header>
