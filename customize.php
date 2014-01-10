@@ -1,29 +1,5 @@
-<!DOCTYPE>
-	<html>
-		<head>
-			<meta charset="UTF-8">
-			<link rel="stylesheet" type="text/css" href="style.css">
-			<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-			<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-			<script type='text/javascript'>
-				// On attend que la page soit chargée 
-				$(document).ready(function(){
-				   // On cache la zone de texte
-				   $('#toggle').hide();
-				   // toggle() lorsque le lien avec l'ID #toggler est cliqué
-				   $('a#toggler').click(function()
-				  {
-				      $('#toggle').toggle(400);
-				      return false;
-				   });
-				});
-				
-			</script>
-		</head>
-
-		<body>
-			<?php include 'menu.php'; ?>
+			<?php REQUIRE 'header.php'; ?>
 
 			<div id="choice_box">
 				<div class="choice">
@@ -53,5 +29,5 @@
 					Toggle element 
 				</div>
 			</div>
-		</body>
-	</html>
+
+			<?php require 'footer.php'; ?>
