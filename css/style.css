@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,700);
 
 /*===COLOR===
 Bleu : #4870cf
@@ -16,37 +16,37 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 a{
-	text-decoration: none;		
+    text-decoration: none;		
 }
 
 
@@ -55,9 +55,9 @@ body{margin: auto;position:relative;font-family: 'Raleway', sans-serif;}
 .content{max-width:1080px; min-width:800px;margin:auto;position:relative;}
 /******** Header ********/
 header{
-	background-color: #fff;
-	width: 100%;
-	height: 70px;
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
     box-shadow:0 1px 1px 0px rgba(0,0,0,0.3);
 }
 header h1{
@@ -67,10 +67,10 @@ header h1{
     line-height:70px;
 }
 header h1 a{
-	font-size: 35px;	
-	color: #4870cf;	
-	line-height: 70px;
-	font-weight: 100;
+    font-size: 35px;	
+    color: #4870cf;	
+    line-height: 70px;
+    font-weight: 100;
 }
 header h1 span{
     font-weight:bold;
@@ -81,13 +81,13 @@ header nav{
     right:0;
 }
 header ul{
-	list-style-type:none;
-	text-align:center;
+    list-style-type:none;
+    text-align:center;
     height: 70px;
 }
 header ul li{
     display: inline-block;
-	line-height: 70px;
+    line-height: 70px;
     margin: 0 20px 0 20px;
 }
 header ul li a{
@@ -104,41 +104,41 @@ header ul a.active{
 }
 /******** Bar Générale ********/
 #choice_box{
-	background-image: url(../img/back.png);
-	width: 100%;
-	height: 234px;
+    background-image: url(../img/back.png);
+    width: 100%;
+    height: 234px;
 }
 .choice{
-	background-color: rgba(243,243,243,0.4);
-	width:742px;
-	height:75px;
-	margin-left:296px;
-	-webkit-border-radius:0px 0px 5px 5px;
+    background-color: rgba(243,243,243,0.4);
+    width:742px;
+    height:75px;
+    margin-left:296px;
+    -webkit-border-radius:0px 0px 5px 5px;
     -moz-border-radius:0px 0px 5px 5px;
-	border-radius:0px 0px 5px 5px;
+    border-radius:0px 0px 5px 5px;
 }
 form{
-	font-size: 20px;
-	color: white;
+    font-size: 20px;
+    color: white;
 }
 form input{
-	font-family: 'Raleway', sans-serif;
-	margin-left: 60px;
-	margin-top: 32px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 60px;
+    margin-top: 32px;
 }
 /******** Design choice ********/
 #toggle_text{
-	background-color: #33ccff;
-	width: 100%;
-	height: 40px;
-	margin-bottom: 2px;
+    background-color: #33ccff;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2px;
 }
 #toggle_text a{
-	color: white;
-	line-height: 35px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 600;
-	margin-left: 60px
+    color: white;
+    line-height: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-left: 60px
 }
 #toggle{
     height: 50px;
@@ -146,20 +146,27 @@ form input{
     text-align:center;
 }
 
-/*=========================
-HOW TO USE
-==========================*/
-#HowUse{
-    margin-top:50px;
-}
-#select, #custom, #generate{
-    margin:50px 0;
-}
 h2{
     color:#656565;
     font-size:45px;
     font-weight:100;
     font-style:italic;
+}
+h5{
+    color:#000;
+    font-size:17px;
+    font-weight:100;
+    font-style:italic;
+}
+/*=========================
+HOW TO USE
+==========================*/
+#HowUse{
+    padding-top:50px;
+    padding-bottom:80px;
+}
+#select, #custom, #generate{
+    margin:50px 0;
 }
 .right{
     float:right;
@@ -188,4 +195,54 @@ h2{
     width: 20%;
     height: 200px;
     background-color: #4870cf;
+}
+
+/*=========================
+EXPLORE HIS CAPACITIES
+==========================*/
+#explore{
+    padding-top:50px;
+    padding-bottom:80px;
+    background-color: #ebebeb;
+    -moz-box-shadow: 0px 1px 5px 0px #606060;
+    -webkit-box-shadow: 0px 1px 5px 0px #606060;
+    -o-box-shadow: 0px 1px 5px 0px #606060;
+    box-shadow: 0px 1px 5px 0px #969606060696;
+}
+#discover{
+    margin-top:15px;
+}
+#presentation{
+    margin-top: 80px;
+    height: 340px;
+    position:relative;
+}
+.example{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.6);
+    display:inline-block;
+    position:absolute;
+    border-radius:2px
+    -moz-box-shadow: 0px 1px 10px 0px #969696;
+    -webkit-box-shadow: 0px 1px 10px 0px #969696;
+    -o-box-shadow: 0px 1px 10px 0px #969696;
+    box-shadow: 0px 1px 10px 0px #969696;
+}
+#example2{
+    left:50%;
+    margin-left: -125px;
+}
+#example3{
+    right:0;
+}
+#bt_explore{
+    width: 200px;
+    background-color: #4870cf;
+    color:#fff;
+    font-weight:700;
+    font-size:20px;
+    border-radius:2px;
+    text-align:center;
+    padding:12px 80px;
 }
