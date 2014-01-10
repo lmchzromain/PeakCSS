@@ -145,7 +145,18 @@ form input{
     background: #fff;
     text-align:center;
 }
-
+h2{
+    color:#656565;
+    font-size:45px;
+    font-weight:100;
+    font-style:italic;
+}
+h5{
+    color:#000;
+    font-size:17px;
+    font-weight:100;
+    font-style:italic;
+}
 /*=========================
 HOW TO USE
 ==========================*/
@@ -154,13 +165,7 @@ HOW TO USE
 }
 #select, #custom, #generate{
     margin:50px 0;
-}
-h2{
-    color:#656565;
-    font-size:45px;
-    font-weight:100;
-    font-style:italic;
-}
+}   
 .right{
     float:right;
 }
