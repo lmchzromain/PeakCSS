@@ -51,8 +51,7 @@ a{
 
 html{width: 100%;background-color: #FFF;}
 body{margin: auto;position:relative;font-family: 'Raleway', sans-serif;}
-.content{max-width:1080px; min-width:800px;margin:auto;position:relative;}
-
+.content{max-width:75%; min-width:800px;margin:auto;position:relative;}
 
 /******** Header ********/
 header{
@@ -148,7 +147,7 @@ form input{
     background: #fff;
     text-align:center;
 }
-<<<<<<< HEAD
+
 .toggle table tr th{
     padding: 2px 10px 2px 10px;
     color: #333;
@@ -183,8 +182,7 @@ form input{
 	width:70px;
 	line-height:20px;
 }
-    
-=======
+
 h2{
     color:#656565;
     font-size:45px;
@@ -197,7 +195,6 @@ h5{
     font-weight:100;
     font-style:italic;
 }
->>>>>>> origin/master
 /*=========================
         HOW TO USE
 ==========================*/
