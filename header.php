@@ -23,16 +23,17 @@
 //            });
             $('.picker').click(function(){
                 $id = $(this).attr("id");
-                console.log($id);
+                
             });
             $('.picker').colpick({
 	           layout:'hex',
 	           submit:0,
 	           colorScheme:'dark',
 	           onChange:function(hsb,hex,rgb,fromSetColor) {
-		          if(!fromSetColor) $(''+$id+'.picker').val(hex).css('border-color','#'+hex);
+		          if(!fromSetColor) $('#'+$id+'.picker').val(hex).css('border-color','#'+hex);
 	           }
             });
+                
 //                .keyup(function(){
 //	               $(this).colpickSetColor(this.value);
 //                });
@@ -51,7 +52,7 @@
                         <li><a href="">Home</a></li> 
                         <li><a href="customize.php">Customize</a></li>
                         <li class="active"><a href="">Explore</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
             </div>
