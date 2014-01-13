@@ -348,7 +348,7 @@ EXPLORE HIS CAPACITIES
     display:inline-block;
     position:absolute;
     border-radius:2px
-    -moz-box-shadow: 0px 1px 10px 0px #969696;
+        -moz-box-shadow: 0px 1px 10px 0px #969696;
     -webkit-box-shadow: 0px 1px 10px 0px #969696;
     -o-box-shadow: 0px 1px 10px 0px #969696;
     box-shadow: 0px 1px 10px 0px #969696;
@@ -394,59 +394,59 @@ CONTACT
     font-size: 60px;
 }
 
-    /*** Champ form ***/
-        #center{
-            margin: 0 auto;
-        }       
-        #contact_us form {
-            margin-left: 35px;
-        }
-        .box{
-            width: 49%;
-            display: inline-block;
-            margin-bottom: 1%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 35px;
-            position:  relative;
-            vertical-align: top;
-        }
-        .box input{
-            border: 2px solid #fff;
-            background-color : transparent;
-            width: 90%;
-            height: 25px;
-            border-radius: 2px;
-            margin-bottom: 23px;
-            font-size: 20px;
-            padding: 10px;
-            color: #fff;
-        }     
-        .box textarea{
-            border: 2px solid #fff;
-            background-color : transparent;
-            width: 90%;
-            height: 95px;
-            border-radius: 2px;
-            margin: auto;
-            font-size: 20px;
-            padding: 10px;
-            color: #fff;
-            resize: none;
-        }
-        #button_send{
-            border: 2px solid #fff;
-            background-color : transparent;
-            width: 95%;
-            height: 50px;
-            border-radius: 2px;
-            margin-bottom: 20px;
-            margin-top: 25px;
-            font-size: 20px;
-            padding: 10px;
-            color: #fff;
-        }
-        
+/*** Champ form ***/
+#center{
+    margin: 0 auto;
+}       
+#contact_us form {
+    margin-left: 35px;
+}
+.box{
+    width: 49%;
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    position:  relative;
+    vertical-align: top;
+}
+.box input{
+    border: 2px solid #fff;
+    background-color : transparent;
+    width: 90%;
+    height: 25px;
+    border-radius: 2px;
+    margin-bottom: 23px;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}     
+.box textarea{
+    border: 2px solid #fff;
+    background-color : transparent;
+    width: 90%;
+    height: 95px;
+    border-radius: 2px;
+    margin: auto;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+    resize: none;
+}
+#button_send{
+    border: 2px solid #fff;
+    background-color : transparent;
+    width: 95%;
+    height: 50px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
 
 /*=========================
 QUOTE
