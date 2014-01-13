@@ -43,7 +43,7 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker1"></input></td>
                 <td><span class="before-input radius-left">H</span><input type="text" class="shadow radius-right"/>
                     <span class="before-input radius-left">V</span><input type="text" class="shadow radius-right"/>
                     <span class="before-input radius-left">B</span><input type="text" class="shadow radius-right"/>
@@ -84,7 +84,7 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker2"></input></td>
                 <td><span class="before-input radius-left">H</span><input type="text" class="shadow radius-right"/>
                     <span class="before-input radius-left">V</span><input type="text" class="shadow radius-right"/>
                     <span class="before-input radius-left">B</span><input type="text" class="shadow radius-right"/>

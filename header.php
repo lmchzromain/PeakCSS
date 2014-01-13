@@ -15,18 +15,22 @@
             // On attend que la page soit chargée 
             $(document).ready(function(){
             // On cache la zone de texte
-            $('.toggle').hide();
+            //$('.toggle').hide();
             // toggle() lorsque le lien avec l'ID #toggler est cliqué
-            $('a.toggler').click(function(){
-                $('.toggle').toggle(400);
-                return false;
+//            $('a.toggler').click(function(){
+//                $('.toggle').toggle(400);
+//                return false;
+//            });
+            $('.picker').click(function(){
+                $id = $(this).attr("id");
+                console.log($id);
             });
             $('.picker').colpick({
 	           layout:'hex',
 	           submit:0,
 	           colorScheme:'dark',
 	           onChange:function(hsb,hex,rgb,fromSetColor) {
-		          if(!fromSetColor) $('.picker').val(hex).css('border-color','#'+hex);
+		          if(!fromSetColor) $(''+$id+'.picker').val(hex).css('border-color','#'+hex);
 	           }
             });
 //                .keyup(function(){
