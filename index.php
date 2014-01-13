@@ -1,5 +1,5 @@
 <?php 
-require "header.php";
+require "header.php";    
 ?>
 <div id="peakphoto">
     <div class="content">
@@ -52,5 +52,5 @@ require "header.php";
 <div id="quote">  
 </div>
 <?php
-require "footer.php";
+    require "footer.php";
 ?>
