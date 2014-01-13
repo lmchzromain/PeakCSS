@@ -23,16 +23,17 @@
 //            });
             $('.picker').click(function(){
                 $id = $(this).attr("id");
-                console.log($id);
+                
             });
             $('.picker').colpick({
 	           layout:'hex',
 	           submit:0,
 	           colorScheme:'dark',
 	           onChange:function(hsb,hex,rgb,fromSetColor) {
-		          if(!fromSetColor) $(''+$id+'.picker').val(hex).css('border-color','#'+hex);
+		          if(!fromSetColor) $('#'+$id+'.picker').val(hex).css('border-color','#'+hex);
 	           }
             });
+                
 //                .keyup(function(){
 //	               $(this).colpickSetColor(this.value);
 //                });
