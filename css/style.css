@@ -15,7 +15,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -127,7 +127,6 @@ header ul a.active{
 	margin-top: 32px;
 }
 
-
 /******** Choice ********/
 .toggle_text{
 	background-color: #33ccff;
@@ -140,35 +139,60 @@ header ul a.active{
 	line-height: 35px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
-	margin-left: 60px
+	margin-left: 4%;
 }
 .toggle{
     min-height: 100px;
     background: #fff;
     text-align:center;
 }
-
+.toggle table{margin-left:4%; margin-top:10px;}
+.toggle table tr td{padding-bottom:25px;}
 .toggle table tr th{
     padding: 2px 10px 2px 10px;
     color: #333;
 }
 .toggle table td{
     padding: 2px 10px 2px 10px;
+    text-align:left;
+}
+.toggle table td:first-child{padding: 2px 10px 2px 0; width:200px;}
+.toggle table td select{
+    padding: 4px 12px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background: #eee;
+    color:#555;
+    border:1px solid #ccc;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
 }
 .toggle table input[type="text"]{
     padding: 4px 12px;
 	border:1px solid #ccc;
-    height: 20px;
+    height: 18px;
+    vertical-align:middle;
+    outline:none;
 }
 .radius-left{border-radius: 4px 0 0 4px;}
 .radius-right{border-radius: 0 4px 4px 0;}
 .radius-all{border-radius: 4px;}
+span.shadow{margin-bottom:4px; display: inline-block;}
 .toggle table input.shadow{
     width:20px;
+    margin-bottom:4px;
+    display: inline-block;
+    height: 16px;
 }
 .before-input{
     padding: 6px 8px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     line-height: 1;
     color: #555;
@@ -176,13 +200,13 @@ header ul a.active{
     background-color: #eee;
     border: 1px solid #ccc;
     border-right: 0px;
+    vertical-align:middle;
 }
 .picker{
     margin:0;
 	width:70px;
 	line-height:20px;
 }
-
 h2{
     color:#656565;
     font-size:45px;
@@ -195,7 +219,6 @@ h5{
     font-weight:100;
     font-style:italic;
 }
-
 /*===============================
     Page de test sur customize2
 ===============================*/

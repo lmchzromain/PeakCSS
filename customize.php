@@ -44,10 +44,36 @@
                     </select>
                 </td>
                 <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker1"></input></td>
-                <td><span class="before-input radius-left">H</span><input type="text" class="shadow radius-right"/>
-                    <span class="before-input radius-left">V</span><input type="text" class="shadow radius-right"/>
-                    <span class="before-input radius-left">B</span><input type="text" class="shadow radius-right"/>
-                    <span class="before-input radius-left">D</span><input type="text" class="shadow radius-right"/></td>
+                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
+                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
+                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
+                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="radius-all" value="Example"></td>
+                <td>
+                    <select>
+                        <option>Arial</option>
+                        <option>Helvetica</option>
+                        <option>Cambria</option>
+                        <option>Times New Roman</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+<?php 
+    for($i=10; $i<41; $i++){
+        echo '<option value="'.$i.'">'.$i.' px</option>';
+        $i++;
+    }
+?>
+                    </select>
+                </td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker1"></input></td>
+                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
+                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
+                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
+                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
             </tr>
         </table>
     </div>
@@ -85,10 +111,10 @@
                     </select>
                 </td>
                 <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker2"></input></td>
-                <td><span class="before-input radius-left">H</span><input type="text" class="shadow radius-right"/>
-                    <span class="before-input radius-left">V</span><input type="text" class="shadow radius-right"/>
-                    <span class="before-input radius-left">B</span><input type="text" class="shadow radius-right"/>
-                    <span class="before-input radius-left">D</span><input type="text" class="shadow radius-right"/></td>
+                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
+                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
+                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
+                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
             </tr>
         </table>
     </div>
