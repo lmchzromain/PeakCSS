@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
 
 /*===COLOR===
-Bleu : #4870cf
+Bleu : #3a85bc
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,48 +16,57 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 a{
-	text-decoration: none;		
+    text-decoration: none;		
 }
 
 html{width: 100%;background-color: #FFF;}
 body{margin: auto;position:relative;font-family: 'Raleway', sans-serif;}
 .content{max-width:75%; min-width:800px;margin:auto;position:relative;}
 
+::-moz-selection { 
+    background:#3a85bc;
+    color:#FFF;
+}
+::selection { 
+    background:#3a85bc;
+    color:#FFF;
+}
+
 /******** Header ********/
 header{
-	background-color: #fff;
-	width: 100%;
-	height: 70px;
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
     box-shadow:0 1px 1px 0px rgba(0,0,0,0.3);
 }
 header h1{
@@ -67,10 +76,10 @@ header h1{
     line-height:70px;
 }
 header h1 a{
-	font-size: 35px;	
-	color: #4870cf;	
-	line-height: 70px;
-	font-weight: 100;
+    font-size: 35px;	
+    color: #3a85bc;	
+    line-height: 70px;
+    font-weight: 100;
 }
 header h1 span{
     font-weight:bold;
@@ -81,17 +90,17 @@ header nav{
     right:0;
 }
 header ul{
-	list-style-type:none;
-	text-align:center;
+    list-style-type:none;
+    text-align:center;
     height: 70px;
 }
 header ul li{
     display: inline-block;
-	line-height: 70px;
+    line-height: 70px;
     margin: 0 20px 0 20px;
 }
 header ul li a{
-    color: #4870cf;
+    color: #3a85bc;
     font-weight:300;
     letter-spacing: 1px;
     font-size:16px;
@@ -104,43 +113,43 @@ header ul a.active{
 }
 /******** Bar Générale ********/
 #choice_box{
-	background-image: url(../img/back.png);
-	width: 100%;
-	height: 234px;
+    background-image: url(../img/back.png);
+    width: 100%;
+    height: 234px;
 }
 .choice{
-	background-color: rgba(243,243,243,0.4);
-	width:742px;
-	height:75px;
-	margin-left:296px;
-	-webkit-border-radius:0px 0px 5px 5px;
+    background-color: rgba(243,243,243,0.4);
+    width:742px;
+    height:75px;
+    margin-left:296px;
+    -webkit-border-radius:0px 0px 5px 5px;
     -moz-border-radius:0px 0px 5px 5px;
-	border-radius:0px 0px 5px 5px;
+    border-radius:0px 0px 5px 5px;
 }
 .choice form{
-	font-size: 20px;
-	color: white;
+    font-size: 20px;
+    color: white;
 }
 .choice form input{
-	font-family: 'Raleway', sans-serif;
-	margin-left: 60px;
-	margin-top: 32px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 60px;
+    margin-top: 32px;
 }
 
 
 /******** Choice ********/
 .toggle_text{
-	background-color: #33ccff;
-	width: 100%;
-	height: 40px;
-	margin-bottom: 2px;
+    background-color: #33ccff;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2px;
 }
 .toggle_text a{
-	color: white;
-	line-height: 35px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 600;
-	margin-left: 60px
+    color: white;
+    line-height: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-left: 60px
 }
 .toggle{
     min-height: 100px;
@@ -157,7 +166,7 @@ header ul a.active{
 }
 .toggle table input[type="text"]{
     padding: 4px 12px;
-	border:1px solid #ccc;
+    border:1px solid #ccc;
     height: 20px;
 }
 .radius-left{border-radius: 4px 0 0 4px;}
@@ -179,8 +188,8 @@ header ul a.active{
 }
 .picker{
     margin:0;
-	width:70px;
-	line-height:20px;
+    width:70px;
+    line-height:20px;
 }
 
 h2{
@@ -197,7 +206,7 @@ h5{
 }
 
 /*===============================
-    Page de test sur customize2
+Page de test sur customize2
 ===============================*/
 .accordionContent{
     min-height: 100px;
@@ -226,13 +235,62 @@ h5{
     width:20px;
 }
 /*=========================
-        HOW TO USE
+PEAK PHOTO HOME
+==========================*/
+#peakphoto{
+    position:relative;
+    width: 100%;
+    height: 479px;
+    background-image:url(../img/peak-home.jpg);
+    background-position: center center;
+}
+#catch{
+    position:relative;
+    top:120px;
+    width: 520px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius:4px;
+}
+.simple{
+    font-size:40px;
+    font-weight:300;
+    color:rgba(0, 0, 0, 0.8);
+    padding:30px 0 0 30px;
+}
+.prepare{
+    font-size:38px;
+    font-weight:100;
+    color:rgba(0, 0, 0, 0.6);
+    padding:15px 30px 30px 35px;
+}
+#bt_howuse, #bt_customize{
+    position:absolute;
+    background-color: #3a85bc;
+    color:#fff;
+    font-weight:400;
+    font-size:20px;
+    border-radius:2px;
+    text-align:center;
+    bottom:40px;
+}
+#bt_howuse{
+    padding:14px 47px;
+    left: 30px;
+}
+#bt_customize{
+    padding:14px 53px;
+    right: 30px;
+}
+
+/*=========================
+HOW TO USE
 ==========================*/
 #HowUse{
     margin-top:50px;
 }
 #select, #custom, #generate{
-    margin:50px 0;
+    margin:30px 0;
 }   
 .right{
     float:right;
@@ -290,7 +348,7 @@ EXPLORE HIS CAPACITIES
     display:inline-block;
     position:absolute;
     border-radius:2px
-    -moz-box-shadow: 0px 1px 10px 0px #969696;
+        -moz-box-shadow: 0px 1px 10px 0px #969696;
     -webkit-box-shadow: 0px 1px 10px 0px #969696;
     -o-box-shadow: 0px 1px 10px 0px #969696;
     box-shadow: 0px 1px 10px 0px #969696;
@@ -303,13 +361,13 @@ EXPLORE HIS CAPACITIES
     right:0;
 }
 #bt_explore{
-    background-color: #4870cf;
+    background-color: #3a85bc;
     color:#fff;
-    font-weight:700;
+    font-weight:400;
     font-size:20px;
     border-radius:2px;
     text-align:center;
-    padding:12px 80px;
+    padding:12px 90px;
 }
 
 /*=========================
@@ -336,65 +394,65 @@ CONTACT
     font-size: 60px;
 }
 
-    /*** Champ form ***/
-        #center{
-            margin: 0 auto;
-        }       
-        #contact_us form {
-            margin-left: 35px;
-        }
-        .box{
-            width: 49%;
-            display: inline-block;
-            margin-bottom: 1%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 35px;
-            position:  relative;
-            vertical-align: top;
-        }
-        .box input{
-            border: 2px solid #fff;
-            background-color : transparent;
-            width: 90%;
-            height: 25px;
-            border-radius: 2px;
-            margin-bottom: 23px;
-            font-size: 20px;
-            padding: 10px;
-            color: #fff;
-        }     
-        .box textarea{
-            border: 2px solid #fff;
-            background-color : transparent;
-            width: 90%;
-            height: 95px;
-            border-radius: 2px;
-            margin: auto;
-            font-size: 20px;
-            padding: 10px;
-            color: #fff;
-            resize: none;
-        }
-        #button_send{
-            border: 2px solid #fff;
-            background-color : transparent;
-            width: 95%;
-            height: 50px;
-            border-radius: 2px;
-            margin-bottom: 20px;
-            margin-top: 25px;
-            font-size: 20px;
-            padding: 10px;
-            color: #fff;
-        }
-        
+/*** Champ form ***/
+#center{
+    margin: 0 auto;
+}       
+#contact_us form {
+    margin-left: 35px;
+}
+.box{
+    width: 49%;
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    position:  relative;
+    vertical-align: top;
+}
+.box input{
+    border: 2px solid #fff;
+    background-color : transparent;
+    width: 90%;
+    height: 25px;
+    border-radius: 2px;
+    margin-bottom: 23px;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}     
+.box textarea{
+    border: 2px solid #fff;
+    background-color : transparent;
+    width: 90%;
+    height: 95px;
+    border-radius: 2px;
+    margin: auto;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+    resize: none;
+}
+#button_send{
+    border: 2px solid #fff;
+    background-color : transparent;
+    width: 95%;
+    height: 50px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
 
 /*=========================
 QUOTE
 ==========================*/
 #quote{
-    background-color: #4870cf;
+    background-color: #3a85bc;
     height: 200px;
 }
 
