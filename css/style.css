@@ -313,6 +313,84 @@ EXPLORE HIS CAPACITIES
 }
 
 /*=========================
+CONTACT
+==========================*/
+#contact_us{
+    background-color: rgba(51,102,204,0.75);
+    height: 550px;
+    width: 100%;
+}
+#contact_us h2{
+    color: #fff;
+    text-align: center;
+    padding-top: 35px;
+}
+.text_contact{
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 0 0 90px;
+    line-height: 30px;
+}   
+#contact_us span{
+    font-size: 60px;
+}
+
+    /*** Champ form ***/
+        #center{
+            margin: 0 auto;
+        }       
+        #contact_us form {
+            margin-left: 35px;
+        }
+        .box{
+            width: 49%;
+            display: inline-block;
+            margin-bottom: 1%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 35px;
+            position:  relative;
+            vertical-align: top;
+        }
+        .box input{
+            border: 2px solid #fff;
+            background-color : transparent;
+            width: 90%;
+            height: 25px;
+            border-radius: 2px;
+            margin-bottom: 23px;
+            font-size: 20px;
+            padding: 10px;
+            color: #fff;
+        }     
+        .box textarea{
+            border: 2px solid #fff;
+            background-color : transparent;
+            width: 90%;
+            height: 95px;
+            border-radius: 2px;
+            margin: auto;
+            font-size: 20px;
+            padding: 10px;
+            color: #fff;
+            resize: none;
+        }
+        #button_send{
+            border: 2px solid #fff;
+            background-color : transparent;
+            width: 95%;
+            height: 50px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            margin-top: 25px;
+            font-size: 20px;
+            padding: 10px;
+            color: #fff;
+        }
+        
+
+/*=========================
 QUOTE
 ==========================*/
 #quote{
