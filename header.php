@@ -23,6 +23,7 @@
 //            });
             $('.picker').click(function(){
                 $id = $(this).attr("id");
+                
             });
             $('.picker').colpick({
 	           layout:'hex',
@@ -51,7 +52,7 @@
                         <li><a href="">Home</a></li> 
                         <li><a href="customize.php">Customize</a></li>
                         <li class="active"><a href="">Explore</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
             </div>
