@@ -459,7 +459,7 @@ CONTACT
 }
 #button_send{
     border: 2px solid #fff;
-    background-color : transparent;
+    background-color :  #fff;
     width: 95%;
     height: 50px;
     border-radius: 2px;
@@ -467,7 +467,7 @@ CONTACT
     margin-top: 25px;
     font-size: 20px;
     padding: 10px;
-    color: #fff;
+    color: #3a85bc;
 }
 
 
