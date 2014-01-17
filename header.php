@@ -45,7 +45,7 @@
         <header>
             <div class="content">
                 <h1>
-                    <a href="#">Peak<span>CSS</span></a>
+                    <a href="#"><img src="./img/logo.png" alt="logo"/>Peak<span>CSS</span></a>
                 </h1>
                 <nav>
                     <ul>
