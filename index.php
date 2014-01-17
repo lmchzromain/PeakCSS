@@ -42,9 +42,9 @@ require "header.php";
         <h2>Explore his capacities</h2>
         <h5 id="discover">Discover of numerous framework created by the community by means of PeakCSS.</h5>
         <div id="presentation">
-            <div class="example" id="example1"></div>
-            <div class="example" id="example2"></div>
-            <div class="example" id="example3"></div>
+            <div class="thumbnail" id="thumbnail1"></div>
+            <div class="thumbnail" id="thumbnail2"></div>
+            <div class="thumbnail" id="thumbnail3"></div>
         </div>
         <a href="#" id="bt_explore">Explore</a>
     </div>
