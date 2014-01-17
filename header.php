@@ -23,7 +23,7 @@
 //            });
             $('.picker').click(function(){
                 $id = $(this).attr("id");
-                
+                console.log("picker cliqué :"+$id);
             });
             $('.picker').colpick({
 	           layout:'hex',
