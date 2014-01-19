@@ -522,9 +522,9 @@ CONTACT
     color: #3a85bc;
 }
 ::-webkit-input-placeholder { color:rgba(255, 255, 255, 0.8);}
-::-moz-placeholder { color:rgba(255, 255, 255);} 
-:-ms-input-placeholder { color:rgba(255, 255, 255);} 
-input:-moz-placeholder { color:rgba(255, 255, 255);}
+::-moz-placeholder { color:rgba(255, 255, 255, 1);} 
+:-ms-input-placeholder { color:rgba(255, 255, 255, 1);} 
+input:-moz-placeholder { color:rgba(255, 255, 255, 1);}
 
 /*=========================
 FOOTER
