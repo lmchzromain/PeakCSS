@@ -401,13 +401,16 @@ EXPLORE HIS CAPACITIES
     right:0;
 }
 #bt_explore{
+    display:block;
+    width: 250px;
+    height: 34px;
+    padding-top: 15px;
     background-color: #3a85bc;
     color:#fff;
     font-weight:400;
     font-size:20px;
     border-radius:2px;
     text-align:center;
-    padding:12px 90px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
