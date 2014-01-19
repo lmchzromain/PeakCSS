@@ -19,10 +19,14 @@ require "header.php";
                 <h3>1. Select</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ea, totam veritatis harum dolore cupiditate aut ad libero voluptate nam praesentium voluptatibus nulla tempora necessitatibus similique suscipit ratione rem recusandae.</p>
             </div>
-            <div class="pic right"></div>
+            <div class="pic right">
+                <img src="img/check.png" alt="check">
+            </div>
         </div>
         <div id="custom" class="line">
-            <div class="pic"></div>
+            <div class="pic">
+                
+            </div>
             <div class="text right">
                 <h3>2. Custom</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, iusto, accusamus perspiciatis facere mollitia aliquam cumque similique ratione? Fuga, doloribus dolore voluptates sint cum ex aliquam voluptatum? Maxime, fugit, doloremque.</p>
@@ -33,7 +37,9 @@ require "header.php";
                 <h3>3. Generate</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, officia, doloribus, dolore perspiciatis et illo earum quos sapiente autem numquam necessitatibus cum quidem repudiandae vitae nesciunt culpa dolores alias omnis!</p>
             </div>
-            <div class="pic right"></div>         
+            <div class="pic right">
+                <img src="img/generate.png" alt="generate">
+            </div>         
         </div>
     </div>
 </div>
@@ -42,15 +48,19 @@ require "header.php";
         <h2>Explore his capacities</h2>
         <h5 id="discover">Discover of numerous framework created by the community by means of PeakCSS.</h5>
         <div id="presentation">
-            <div class="example" id="example1"></div>
-            <div class="example" id="example2"></div>
-            <div class="example" id="example3"></div>
+            <div class="example"></div>
+            <div class="example"></div>
+            <div class="example"></div>
         </div>
         <a href="#" id="bt_explore">Explore</a>
     </div>
 </div>
 <div id="quote">  
+    <div class="content">
+        <img src="img/guillemet.png" alt="guillemet">
+        <q>Reach summits thanks to PeakCSS</q>
+    </div>
 </div>
 <?php
-    require "footer.php";
+require "footer.php";
 ?>

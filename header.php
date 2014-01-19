@@ -49,7 +49,7 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li> 
+                        <li><a href="index.php">Home</a></li> 
                         <li><a href="customize.php">Customize</a></li>
                         <li class="active"><a href="">Explore</a></li>
                         <li><a href="contact.php">Contact</a></li>
