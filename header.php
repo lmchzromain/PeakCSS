@@ -11,47 +11,43 @@
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type='text/javascript' src="js/colpick.js"></script>
+        <script type='text/javascript' src="js/customize.js"></script>
         <script type='text/javascript'>
-            // On attend que la page soit chargée 
             $(document).ready(function(){
-            // On cache la zone de texte
-            //$('.toggle').hide();
-            // toggle() lorsque le lien avec l'ID #toggler est cliqué
-//            $('a.toggler').click(function(){
-//                $('.toggle').toggle(400);
-//                return false;
-//            });
-            $('.picker').click(function(){
-                $id = $(this).attr("id");
-                console.log("picker cliqué :"+$id);
-            });
-            $('.picker').colpick({
-	           layout:'hex',
-	           submit:0,
-	           colorScheme:'dark',
-	           onChange:function(hsb,hex,rgb,fromSetColor) {
-		          if(!fromSetColor) $('#'+$id+'.picker').val(hex).css('border-color','#'+hex);
-	           }
-            });
-                
+                $('.picker').click(function(){
+                    $id = $(this).attr("id");
+                    console.log("picker cliqué :"+$id);
+                });
+                $('.picker').colpick({
+                    layout:'hex',
+                    submit:0,
+                    colorScheme:'dark',
+                    onChange:function(hsb,hex,rgb,fromSetColor) {
+                        if(!fromSetColor) $('#'+$id+'.picker').val(hex).css('border-color','#'+hex);
+                        //console.log(hex);
+                        $idpicker = $('#'+$id+'.picker').attr('id');
+                        //console.log($idpicker);
+                        $('input[name='+$idpicker+']').css('color','#'+hex);
+                        
+                    }
+                });
 //                .keyup(function(){
 //	               $(this).colpickSetColor(this.value);
 //                });
-                });
-                
+            });
         </script>
     </head>
     <body>
         <header>
             <div class="content">
                 <h1>
-                    <a href="#"><img src="./img/logo.png" alt="logo"/>Peak<span>CSS</span></a>
+                    <a href="index.php"><img src="./img/logo.png" alt="logo"/>Peak<span>CSS</span></a>
                 </h1>
                 <nav>
                     <ul>
                         <li><a href="index.php">Home</a></li> 
                         <li><a href="customize.php">Customize</a></li>
-                        <li class="active"><a href="">Explore</a></li>
+                        <li><a href="">Explore</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>

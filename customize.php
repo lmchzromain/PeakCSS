@@ -12,7 +12,7 @@
 </div>
 <section>
     <div class="toggle_text">
-        <a href="#" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Text</a>
+        <a href="" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Text</a>
     </div>	
     <div class="toggle">
         <table>
@@ -24,7 +24,7 @@
                 <th>SHADOW</th>
             </tr>
             <tr>
-                <td><input type="text" class="radius-all" value="Example"></td>
+                <td><input type="text" class="radius-all example" value="Example" name="text1"></td>
                 <td>
                     <select>
                         <option>Arial</option>
@@ -43,14 +43,14 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker1"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text1" value=""></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
                     <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
             </tr>
             <tr>
-                <td><input type="text" class="radius-all" value="Example"></td>
+                <td><input type="text" class="radius-all" value="Example" name="text2"></td>
                 <td>
                     <select>
                         <option>Arial</option>
@@ -69,7 +69,7 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker2"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text2"></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
@@ -79,7 +79,7 @@
     </div>
 
     <div class="toggle_text">
-        <a href="#" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Button</a>
+        <a href="" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Button</a>
     </div>	
     <div class="toggle">
         <table>
@@ -119,7 +119,7 @@
         </table>
     </div>
     <div class="toggle_text">
-        <a href="#" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Input</a>
+        <a href="" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Input</a>
     </div>	
     <div class="toggle">
         <table>
