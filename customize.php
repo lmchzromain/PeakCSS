@@ -43,7 +43,7 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text1"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text1" value=""></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>

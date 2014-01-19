@@ -24,6 +24,11 @@
                     colorScheme:'dark',
                     onChange:function(hsb,hex,rgb,fromSetColor) {
                         if(!fromSetColor) $('#'+$id+'.picker').val(hex).css('border-color','#'+hex);
+                        //console.log(hex);
+                        $idpicker = $('#'+$id+'.picker').attr('id');
+                        //console.log($idpicker);
+                        $('input[name='+$idpicker+']').css('color','#'+hex);
+                        
                     }
                 });
 //                .keyup(function(){
