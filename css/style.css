@@ -489,17 +489,22 @@ CONTACT
     border-radius: 2px;
     margin-bottom: 23px;
     font-size: 20px;
+    font-weight:400;
+    font-style:normal;
     padding: 10px;
     color: #fff;
 }     
 .box textarea{
     border: 2px solid #fff;
     background-color : transparent;
+    font-family: 'Raleway', sans-serif;
     width: 90%;
     height: 95px;
     border-radius: 2px;
     margin: auto;
     font-size: 20px;
+    font-weight:400;
+    font-style:normal;
     padding: 10px;
     color: #fff;
     resize: none;
@@ -516,6 +521,10 @@ CONTACT
     padding: 10px;
     color: #3a85bc;
 }
+::-webkit-input-placeholder { color:rgba(255, 255, 255, 0.8);}
+::-moz-placeholder { color:rgba(255, 255, 255);} 
+:-ms-input-placeholder { color:rgba(255, 255, 255);} 
+input:-moz-placeholder { color:rgba(255, 255, 255);}
 
 /*=========================
 FOOTER
