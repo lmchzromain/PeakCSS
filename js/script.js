@@ -1,37 +1,79 @@
 $(document).ready(function(){
+
+	/*====================================================
+                Gestion des toggles
+    ====================================================*/
+                //ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
+                $('.accordionButton').click(function() {
+                    $('.accordionButton').removeClass('on');
+                    $('.accordionContent').slideUp('normal');
+                    if($(this).next().is(':hidden') == true) {
+                        $(this).addClass('on');
+                        $(this).next().slideDown('normal');
+                     }        
+                 });  
+                
+                /*** REMOVE IF MOUSEOVER IS NOT REQUIRED ***/
+                
+                //ADDS THE .OVER CLASS FROM THE STYLESHEET ON MOUSEOVER 
+                $('.accordionButton').mouseover(function() {
+                    $(this).addClass('over');
+                }).mouseout(function() {
+                    $(this).removeClass('over');                                        
+                });
+                
+                $('.accordionContent').hide();
+
+
+
+
 	/*====================================================
 				Gestion du formualaires
 	====================================================*/
+		
+		/* Fonction de changement CSS */
+		display_error = function(field){
+			$(field).css({
+				border : '2px solid rgb(255, 203, 96)',
+				'background-image' : 'url(\'./img/attention_form.png\')',
+				'background-repeat' : 'no-repeat',
+				'background-position' : '95%',
+				'background-size' : '20px'
+			});
+		}
+		
+		/** On cache le message d'erreur **/
 		$(".error").css({
 	        display: 'none'
-	     });
+		});
 
-		$("#button_send").click(function(){			
+
+		$("#button_send").click(function(){	
 			/** Champs de saisie Nom **/
 	            if($("#name").val() == ""){
-		            $(".error").css({display : 'inline'});
-		            $("#name").css({border : '2px solid red'});
+		            $(".error").css({display : 'inline'});		
+					display_error($('#name'));		            
 		            return false;
 	            }else if(!$("#name").val().match(/^[a-z]+([ \-']?[a-z]+[ \-']?[a-z]+[ \-']?)[a-z]+$/i)){
-	               $(".error").css({display : 'inline'});
-	                $("#name").css({border : '2px solid red'});
+	              	 $(".error").css({display : 'inline'});		
+					display_error($('#name'));	              	
                     return false;
 	            }else{	            	
 	                $("#name").css({border : '2px solid white'});
-                    return true;
+                   return true;
 	            }               	
         });               	
         
-
+		
         $("#button_send").click(function(){			
-			/** Champs de saisie Nom **/
+			/** Champs de saisie Mail **/
 	            if($("#mail").val() == ""){
 		            $(".error").css({display : 'inline'});
-		            $("#mail").css({border : '2px solid red'});
+		           display_error($('#mail'));
 		            return false;
 	            }else if(!$("#mail").val().match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]{2,}[.][a-zA-Z]{2,4}$/)){
 	               $(".error").css({display : 'inline'});
-	                $("#mail").css({border : '2px solid red'});
+	                display_error($('#mail'));
                     return false;
 	            }else{	            	
 	                $("#mail").css({border : '2px solid white'});
@@ -39,15 +81,16 @@ $(document).ready(function(){
 	            }               	
         });
 
+		
         $("#button_send").click(function(){			
-			/** Champs de saisie Nom **/
+			/** Champs de saisie Why to contact us ? **/
 	            if($("#why").val() == ""){
 		            $(".error").css({display : 'inline'});
-		            $("#why").css({border : '2px solid red'});
+		            display_error($('#why'));
 		            return false;
 	            }else if(!$("#why").val().match(/^[a-z]+([ \-']?[a-z]+[ \-']?[a-z]+[ \-']?)[a-z]+$/i)){
 	               $(".error").css({display : 'inline'});
-	                $("#why").css({border : '2px solid red'});
+	                display_error($('#why'));
                     return false;
 	            }else{	            	
 	                $("#why").css({border : '2px solid white'});
@@ -59,16 +102,15 @@ $(document).ready(function(){
 			/** Champs de saisie Nom **/
 	            if($(".text_besoin").val() == ""){
 		            $(".error").css({display : 'inline'});
-		            $(".text_besoin").css({border : '2px solid red'});
+		            display_error($('.text_besoin'));
 		            return false;
 	            }else if($(".text_besoin").val().match(/^[^a-z0-9._-]$/i)){
 	               	$(".error").css({display : 'inline'});
-	                $(".text_besoin").css({border : '2px solid red'});
+	                display_error($('.text_besoin'));
                     return false;
                 }else{	            	
 	                $(".text_besoin").css({border : '2px solid white'});
                     return true;
 	            }               	
         });
-
 });

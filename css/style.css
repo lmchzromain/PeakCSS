@@ -235,7 +235,6 @@ h5{
 Page de test sur customize2
 ===============================*/
 .accordionContent{
-    min-height: 100px;
     background: #fff;
     text-align:center;
 }
@@ -520,6 +519,7 @@ CONTACT
     font-size: 20px;
     padding: 10px;
     color: #3a85bc;
+
 }
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
@@ -528,8 +528,10 @@ textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 
 /*** Verification form ***/
 #contact_us span.error{
-    margin:0 35px;
-    color:red;
+    text-align: center;
+    background-color: rgba(255, 255, 255,0.5);
+    margin:20px 35px;
+    color: #333;
     font-size:20px;
     font-weight: 300;
     padding:15px 5px 15px 5px;
@@ -537,8 +539,8 @@ textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
     display:inline;
     position:relative;
     float:left;
-    border:2px solid red;
 }
+
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
