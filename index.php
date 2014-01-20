@@ -48,15 +48,9 @@ require "header.php";
         <h2>Explore his capacities</h2>
         <h5 id="discover">Discover of numerous framework created by the community by means of PeakCSS.</h5>
         <div id="presentation">
-<<<<<<< HEAD
             <div class="example"></div>
             <div class="example"></div>
             <div class="example"></div>
-=======
-            <div class="thumbnail"></div>
-            <div class="thumbnail"></div>
-            <div class="thumbnail"></div>
->>>>>>> 1e093d54b6a12d59a0c04b1cb2536bcce12eb3b2
         </div>
         <a href="#" id="bt_explore">Explore</a>
     </div>

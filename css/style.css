@@ -528,12 +528,6 @@ CONTACT
     padding: 10px;
     color: #3a85bc;
 }
-<<<<<<< HEAD
-::-webkit-input-placeholder { color:rgba(255, 255, 255, 0.8);}
-::-moz-placeholder { color:rgba(255, 255, 255, 1);} 
-:-ms-input-placeholder { color:rgba(255, 255, 255, 1);} 
-input:-moz-placeholder { color:rgba(255, 255, 255, 1);}
-=======
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
@@ -564,7 +558,6 @@ QUOTE
     background-color: #3a85bc;
     height: 200px;
 }
->>>>>>> 1e093d54b6a12d59a0c04b1cb2536bcce12eb3b2
 
 /*=========================
 FOOTER

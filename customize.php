@@ -43,19 +43,11 @@
 ?>
                     </select>
                 </td>
-<<<<<<< HEAD
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text1" value=""></input></td>
-                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
-                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
-                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
-                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
-=======
                 <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text1" value=""></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" rel="text1"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" rel="text1"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" rel="text1"/>
                     <span class="before-input radius-left shadow">Distance</span><input type="text" class="text-shadow distance shadow radius-right" rel="text1"/></td>
->>>>>>> 1e093d54b6a12d59a0c04b1cb2536bcce12eb3b2
             </tr>
             <tr>
                 <td><input type="text" class="radius-all" value="Example" name="text2"></td>
@@ -77,11 +69,7 @@
 ?>
                     </select>
                 </td>
-<<<<<<< HEAD
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text2"></input></td>
-=======
                 <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text2"></input></td>
->>>>>>> 1e093d54b6a12d59a0c04b1cb2536bcce12eb3b2
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
