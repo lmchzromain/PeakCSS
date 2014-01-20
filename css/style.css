@@ -393,19 +393,12 @@ EXPLORE HIS CAPACITIES
     -o-box-shadow: 0px 1px 10px 0px #969696;
     box-shadow: 0px 1px 10px 0px #969696;
 }
-<<<<<<< HEAD
-#thumbnail2{
+
+.thumbnail:nth-child(2){
     left:50%;
     margin-left: -125px;
 }
-#thumbnail3{
-=======
-.example:nth-child(2){
-    left:50%;
-    margin-left: -125px;
-}
-.example:last-child{
->>>>>>> 8069cf85795552f297022e5373b5dd80703950c3
+.thumbnail:last-child{
     right:0;
 }
 #bt_explore{
@@ -529,7 +522,7 @@ CONTACT
     padding: 10px;
     color: #3a85bc;
 }
-<<<<<<< HEAD
+
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
@@ -557,12 +550,6 @@ QUOTE
     background-color: #3a85bc;
     height: 200px;
 }
-=======
-::-webkit-input-placeholder { color:rgba(255, 255, 255, 0.8);}
-::-moz-placeholder { color:rgba(255, 255, 255, 1);} 
-:-ms-input-placeholder { color:rgba(255, 255, 255, 1);} 
-input:-moz-placeholder { color:rgba(255, 255, 255, 1);}
->>>>>>> 8069cf85795552f297022e5373b5dd80703950c3
 
 /*=========================
 FOOTER
