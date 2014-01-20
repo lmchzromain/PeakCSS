@@ -12,10 +12,6 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type='text/javascript' src="js/colpick.js"></script>
         <script type='text/javascript' src="js/script.js"></script>
-<<<<<<< HEAD
-=======
-        <script type='text/javascript' src="js/customize.js"></script>
->>>>>>> 31def9f7002c125e2c232d4515eeadb7b3c7b54a
         <script type='text/javascript'>
             $(document).ready(function(){
                 $('.picker').click(function(){
