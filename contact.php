@@ -7,15 +7,18 @@
 
 				<form id="formulaire_contact">
 					<div class="box">
-						<input type="text" class="first" id="name" name="name" placeholder="Your name"/>
-						<input type="text" id="mail" name="mail" placeholder="Your Email"/>
-						<input type="text" id="why" name="why" placeholder="Why to contact us ?"/>
+						<input type="text" class="first" id="name" name="name" placeholder="Your name *"/>
+						<input type="text" id="mail" name="mail" placeholder="Your Email *"/>
+						<input type="text" id="why" name="why" placeholder="Why to contact us ? *"/>
 					</div> 
 					<div class="box">
 						<textarea class="text_besoin" rows="5" cols="60" name="message_area" id="message_area" placeholder="Shoot your ideas !"></textarea>
 						<input type="submit" id="button_send" name="send" value="SEND IT AWAY !" />
 					</div> 
 				</form>
+			<span class="error"><p><img src="./img/attention_form.png" alt="attention" width="15px;"/> 
+					The form has not been sent. You must fill in all the required fields and respect the syntax of fields, 
+					please correct and resubmit the form. Thank you!  </p></span>
 		</div>
 	</div>
 

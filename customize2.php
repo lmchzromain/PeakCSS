@@ -3,7 +3,34 @@
     <head>
         <link href="css/test_toggle/style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"> </script>
-        <script type="text/javascript" src="js/toggle.js"> </script>
+        <script type="text/javascript"> 
+        $(document).ready(function(){
+            /*====================================================
+                Gestion des toggles
+            ====================================================*/
+                //ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
+                $('.accordionButton').click(function() {
+                    $('.accordionButton').removeClass('on');
+                    $('.accordionContent').slideUp('normal');
+                    if($(this).next().is(':hidden') == true) {
+                        $(this).addClass('on');
+                        $(this).next().slideDown('normal');
+                     }        
+                 });  
+                
+                /*** REMOVE IF MOUSEOVER IS NOT REQUIRED ***/
+                
+                //ADDS THE .OVER CLASS FROM THE STYLESHEET ON MOUSEOVER 
+                $('.accordionButton').mouseover(function() {
+                    $(this).addClass('over');
+                }).mouseout(function() {
+                    $(this).removeClass('over');                                        
+                });
+                
+                $('.accordionContent').hide();
+        });
+
+        </script>
     </head>
 
     <body>

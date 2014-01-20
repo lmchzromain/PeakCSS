@@ -16,12 +16,12 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -147,11 +147,11 @@ header ul a.active{
     margin-bottom: 2px;
 }
 .toggle_text a{
-	color: white;
-	line-height: 40px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 400;
-	margin-left: 4%;
+    color: white;
+    line-height: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-left: 4%;
 }
 .toggle{
     min-height: 100px;
@@ -187,7 +187,7 @@ header ul a.active{
 }
 .toggle table input[type="text"]{
     padding: 4px 12px;
-	border:1px solid #ccc;
+    border:1px solid #ccc;
     height: 18px;
     vertical-align:middle;
     outline:none;
@@ -297,10 +297,10 @@ PEAK PHOTO HOME
     text-align:center;
     bottom:40px;
     -webkit-transition: all 0.2s ease-in-out;
--moz-transition: all 0.2s ease-in-out;
--ms-transition: all 0.2s ease-in-out;
--o-transition: all 0.2s ease-in-out;
-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 #bt_howuse{
     padding:14px 47px;
@@ -310,7 +310,7 @@ transition: all 0.2s ease-in-out;
     padding:14px 53px;
     right: 30px;
 }
-#bt_howuse:hover, #bt_customize:hover{background-color: #2379b7;box-shadow:3px 3px 1px 1px rgba(150,150,150,0.5);}
+#bt_howuse:hover, #bt_customize:hover, #bt_explore:hover, .pic:hover{background-color: #2379b7;box-shadow:3px 3px 1px 1px rgba(150,150,150,0.5);}
 /*=========================
 HOW TO USE
 ==========================*/
@@ -344,11 +344,22 @@ HOW TO USE
 }
 .pic{
     display: inline-block;
-    width: 20%;
-    height: 200px;
+    margin-top: 10px;
+    width: 160px;
+    height: 160px;
     background-color: #3a85bc;
     border-radius: 100%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+.pic img{
+    display:block;
+    margin:23px auto 0 auto;
+}
+
 
 /*=========================
 EXPLORE HIS CAPACITIES
@@ -382,23 +393,54 @@ EXPLORE HIS CAPACITIES
     -o-box-shadow: 0px 1px 10px 0px #969696;
     box-shadow: 0px 1px 10px 0px #969696;
 }
-#thumbnail2{
+
+.thumbnail:nth-child(2){
     left:50%;
     margin-left: -125px;
 }
-#thumbnail3{
+.thumbnail:last-child{
     right:0;
 }
 #bt_explore{
+    display:block;
+    width: 250px;
+    height: 34px;
+    padding-top: 15px;
     background-color: #3a85bc;
     color:#fff;
     font-weight:400;
     font-size:20px;
     border-radius:2px;
     text-align:center;
-    padding:12px 90px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
+/*=========================
+QUOTE
+==========================*/
+#quote{
+    background-color: #3a85bc;
+    height: 200px;
+}
+#quote img{
+    display:block;
+    margin:0 auto;
+    padding-top: 40px;
+}
+q{
+    margin-top: 20px;
+    display:block;
+    width: 100%;
+    color:#fff;
+    font-size:36px;
+    font-weight:200;
+    font-style:italic;
+    text-align: center;
+}
 /*=========================
 CONTACT
 ==========================*/
@@ -448,17 +490,22 @@ CONTACT
     border-radius: 2px;
     margin-bottom: 23px;
     font-size: 20px;
+    font-weight:400;
+    font-style:normal;
     padding: 10px;
     color: #fff;
 }     
 .box textarea{
     border: 2px solid #fff;
     background-color : transparent;
+    font-family: 'Raleway', sans-serif;
     width: 90%;
     height: 95px;
     border-radius: 2px;
     margin: auto;
     font-size: 20px;
+    font-weight:400;
+    font-style:normal;
     padding: 10px;
     color: #fff;
     resize: none;
@@ -475,7 +522,42 @@ CONTACT
     padding: 10px;
     color: #3a85bc;
 }
+input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 
+/*** Verification form ***/
+#contact_us span.error{
+    margin:0 35px;
+    color:red;
+    font-size:20px;
+    font-weight: 300;
+    padding:15px 5px 15px 5px;
+    width:91%;
+    display:inline;
+    position:relative;
+    float:left;
+    border:2px solid red;
+}
+input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+
+/*** Verification form ***/
+#contact_us span.error{
+    margin:0 35px;
+    color:red;
+    font-size:20px;
+    font-weight: 300;
+    padding:15px 5px 15px 5px;
+    width:91%;
+    display:inline;
+    position:relative;
+    float:left;
+    border:2px solid red;
+}
 /*=========================
 QUOTE
 ==========================*/
