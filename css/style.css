@@ -388,7 +388,7 @@ EXPLORE HIS CAPACITIES
     height: 340px;
     position:relative;
 }
-.thumbnail{
+.example{
     width: 250px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0.6);
@@ -400,20 +400,11 @@ EXPLORE HIS CAPACITIES
     -o-box-shadow: 0px 1px 10px 0px #969696;
     box-shadow: 0px 1px 10px 0px #969696;
 }
-<<<<<<< HEAD
 .example:nth-child(2){
     left:50%;
     margin-left: -125px;
 }
 .example:last-child{
-=======
-
-.thumbnail:nth-child(2){
-    left:50%;
-    margin-left: -125px;
-}
-.thumbnail:last-child{
->>>>>>> 1e093d54b6a12d59a0c04b1cb2536bcce12eb3b2
     right:0;
 }
 #bt_explore{
