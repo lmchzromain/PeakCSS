@@ -3,29 +3,82 @@ $(document).ready(function(){
 	/*====================================================
                 Gestion des toggles
     ====================================================*/
-                //ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
-                $('.accordionButton').click(function() {
-                    $('.accordionButton').removeClass('on');
-                    $('.accordionContent').slideUp('normal');
-                    if($(this).next().is(':hidden') == true) {
-                        $(this).addClass('on');
-                        $(this).next().slideDown('normal');
-                     }        
-                 });  
-                
-                /*** REMOVE IF MOUSEOVER IS NOT REQUIRED ***/
-                
-                //ADDS THE .OVER CLASS FROM THE STYLESHEET ON MOUSEOVER 
-                $('.accordionButton').mouseover(function() {
-                    $(this).addClass('over');
-                }).mouseout(function() {
-                    $(this).removeClass('over');                                        
-                });
-                
-                $('.accordionContent').hide();
+       	//ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
+       	
+	       	$('.accordionButton').click(function() {
+	           	$('.accordionButton').removeClass('on');
+	           	$('.accordionContent').slideUp('normal');
+	           	if($(this).next().is(':hidden') == true) {
+	               	$(this).addClass('on');
+	               	$(this).next().slideDown('normal');
+	            }        
+	        });                
+	                
+	        //ADDS THE .OVER CLASS FROM THE STYLESHEET ON MOUSEOVER 
+	        $('.accordionButton').mouseover(function() {
+	            $(this).addClass('over');
+	        }).mouseout(function() {
+	            $(this).removeClass('over');                                        
+	        });
+	                
+	        $('.accordionContent').hide();
+    	
 
+    /*====================================================
+                Gestion des display toggles
+    ====================================================*/
+    	$('#toggle_text').css({display : 'none'});
+    	$('#toggle_button').css({display : 'none'});
+    	$('#toggle_input').css({display : 'none'});
+    	$('#toggle_block').css({display : 'none'});
+    	$('#toggle_table').css({display : 'none'});
 
+    	 	/** Selection de la partie **/
+            $('input:checkbox[name=text]').click(function(){
+            	if( $('input:checkbox[name=text]').is(':checked')){
+               		$('#toggle_text').css({display: 'block'});
+               	}else{
+               		$('#toggle_text').css({display : 'none'});
+               	}
+            });
 
+            /** Selection de la partie **/
+            $('input:checkbox[name=button]').click(function(){
+            	if( $('input:checkbox[name=button]').is(':checked')){
+               		$('#toggle_button').css({display: 'block'});
+               	}else{
+               		$('#toggle_button').css({display : 'none'});
+               	}
+            });
+
+            /** Selection de la partie **/
+            $('input:checkbox[name=input]').click(function(){
+            	if( $('input:checkbox[name=input]').is(':checked')){
+               		$('#toggle_input').css({display: 'block'});
+               	}else{
+               		$('#toggle_input').css({display : 'none'});
+               	}
+            });
+
+            /** Selection de la partie **/
+            $('input:checkbox[name=block]').click(function(){
+            	if( $('input:checkbox[name=block]').is(':checked')){
+               		$('#toggle_block').css({display: 'block'});
+               	}else{
+               		$('#toggle_block').css({display : 'none'});
+               	}
+            });
+
+            /** Selection de la partie **/
+            $('input:checkbox[name=table]').click(function(){
+            	if( $('input:checkbox[name=table]').is(':checked')){
+               		$('#toggle_table').css({display: 'block'});
+               	}else{
+               		$('#toggle_table').css({display : 'none'});
+               	}
+            });
+
+           
 
 	/*====================================================
 				Gestion du formualaires

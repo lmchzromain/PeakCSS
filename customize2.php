@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
     <head>
-        <link href="css/test_toggle/style.css" rel="stylesheet" type="text/css" />        
+        <link href="css/test_toggle/style.css" rel="stylesheet" type="text/css" /> 
     </head>
 
     <body>
@@ -10,11 +10,11 @@
 <div id="choice_box">
     <div class="choice">
         <form>
-            <input type="checkbox" name="text" value="Text"> Text </input>
-            <input type="checkbox" name="button" value="Button"> Button </input>
-			<input type="checkbox" name="input" value="Input"> Input </input>
-			<input type="checkbox" name="block" value="Block"> Block </input>
-			<input type="checkbox" name="table" value="Table"> Table </input>
+            <input type="checkbox" id="texte_check" name="text" value="Text"> Text </input>
+            <input type="checkbox" id="button_check" name="button" value="Button"> Button </input>
+			<input type="checkbox" id="input_check" name="input" value="Input"> Input </input>
+			<input type="checkbox" id="block_check" name="block" value="Block"> Block </input>
+			<input type="checkbox" id="table_check" name="table" value="Table"> Table </input>
         </form>
     </div>
 </div>
@@ -22,7 +22,8 @@
 <!-- SECTION ==> Texte -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Texte</p></div>
+          
+            <div class="accordionButton" id="toggle_text"><p>Texte</p></div>
             <div class="accordionContent">
                  <table>
                     <tr>
@@ -95,13 +96,13 @@
                     </tr>
                 </table>
             </div>
-        </div>     
+        </div>         
     </section>
 
 <!-- SECTION ==> Button -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Button</p></div>
+            <div class="accordionButton" id="toggle_button"><p>Button</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
@@ -145,7 +146,7 @@
 <!-- SECTION ==> Input -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Input</p></div>
+            <div class="accordionButton" id="toggle_input"><p>Input</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
@@ -189,7 +190,7 @@
 <!-- SECTION ==> Block -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Block</p></div>
+            <div class="accordionButton" id="toggle_block"><p>Block</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
@@ -233,7 +234,7 @@
 <!-- SECTION ==> Table -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Table</p></div>
+            <div class="accordionButton" id="toggle_table"><p>Table</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
