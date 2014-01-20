@@ -25,7 +25,7 @@ require "header.php";
         </div>
         <div id="custom" class="line">
             <div class="pic">
-                
+
             </div>
             <div class="text right">
                 <h3>2. Custom</h3>
@@ -48,9 +48,9 @@ require "header.php";
         <h2>Explore his capacities</h2>
         <h5 id="discover">Discover of numerous framework created by the community by means of PeakCSS.</h5>
         <div id="presentation">
-            <div class="example"></div>
-            <div class="example"></div>
-            <div class="example"></div>
+            <div class="thumbnail"></div>
+            <div class="thumbnail"></div>
+            <div class="thumbnail"></div>
         </div>
         <a href="#" id="bt_explore">Explore</a>
     </div>
