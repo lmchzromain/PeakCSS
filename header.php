@@ -11,7 +11,7 @@
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type='text/javascript' src="js/colpick.js"></script>
-        <script type='text/javascript' src="js/customize.js"></script>
+        <script type='text/javascript' src="js/script.js"></script>
         <script type='text/javascript'>
             $(document).ready(function(){
                 $('.picker').click(function(){
@@ -24,6 +24,11 @@
                     colorScheme:'dark',
                     onChange:function(hsb,hex,rgb,fromSetColor) {
                         if(!fromSetColor) $('#'+$id+'.picker').val(hex).css('border-color','#'+hex);
+                        //console.log(hex);
+                        $idpicker = $('#'+$id+'.picker').attr('id');
+                        //console.log($idpicker);
+                        $('input[name='+$idpicker+']').css('color','#'+hex);
+                        
                     }
                 });
 //                .keyup(function(){
@@ -40,7 +45,7 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li> 
+                        <li><a href="index.php">Home</a></li> 
                         <li><a href="customize.php">Customize</a></li>
                         <li><a href="">Explore</a></li>
                         <li><a href="contact.php">Contact</a></li>
