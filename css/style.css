@@ -522,6 +522,25 @@ CONTACT
     padding: 10px;
     color: #3a85bc;
 }
+input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
+
+/*** Verification form ***/
+#contact_us span.error{
+    margin:0 35px;
+    color:red;
+    font-size:20px;
+    font-weight: 300;
+    padding:15px 5px 15px 5px;
+    width:91%;
+    display:inline;
+    position:relative;
+    float:left;
+    border:2px solid red;
+}
+
 
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
