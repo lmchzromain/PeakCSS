@@ -41,7 +41,6 @@
                 });
                 
                 $('.text-shadow').keyup(function(){
-                    console.log("text-shadow");
                     $id = $(this).attr("rel");
                     console.log("shadow cliqué :"+$id);
 //                    $val = $(this).val();
@@ -50,8 +49,11 @@
                     $shadow[1] = $('.text-shadow.vertical').val();
                     $shadow[2] = $('.text-shadow.blur').val();
                     $shadow[3] = $('.text-shadow.distance').val();
-                    for($i=0; $i>4){
-                        if($shadow($i)){
+                    for($i=0; $i>4; $i++){
+                        if($shadow($i) == null){
+                            $shadow($i) == 0;
+                        }
+                    };
                     console.log($shadow[0], $shadow[1], $shadow[2], $shadow[3]);
                     $('[name='+$id+']').textshadow('#000000 0px 0px 0px 0px');
                     $('[name='+$id+']').textshadowremove();
