@@ -540,7 +540,6 @@ textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
     float:left;
     border:2px solid red;
 }
-
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
