@@ -12,14 +12,10 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type='text/javascript' src="js/colpick.js"></script>
         <script type='text/javascript' src="js/script.js"></script>
-<<<<<<< HEAD
-=======
-        <script type='text/javascript' src="js/customize.js"></script>
->>>>>>> 31def9f7002c125e2c232d4515eeadb7b3c7b54a
         <script type='text/javascript'>
             $(document).ready(function(){
                 $('.picker').click(function(){
-                    $id = $(this).attr("id");
+                    $id = $(this).attr("rel");
                     console.log("picker cliqué :"+$id);
                 });
                 $('.picker').colpick({
@@ -27,14 +23,40 @@
                     submit:0,
                     colorScheme:'dark',
                     onChange:function(hsb,hex,rgb,fromSetColor) {
-                        if(!fromSetColor) $('#'+$id+'.picker').val(hex).css('border-color','#'+hex);
+                        if(!fromSetColor) $('[rel='+$id+'].picker').val(hex).css('border-color','#'+hex);
                         //console.log(hex);
-                        $idpicker = $('#'+$id+'.picker').attr('id');
+                        $idpicker = $('[rel='+$id+'].picker').attr('rel');
                         //console.log($idpicker);
                         $('input[name='+$idpicker+']').css('color','#'+hex);
                         
                     }
                 });
+                $('.size').click(function(){
+                    $id = $(this).attr("rel");
+                    console.log("size cliqué :"+$id);
+                    $val = $(this).val();
+                    $('input[name='+$id+']').css({'font-size':$val+'px', 'height':$val+'px'});
+                });
+                
+                $('.text-shadow').focus(function(){
+                    $id = $(this).attr("rel");
+                    console.log("shadow cliqué :"+$id);
+//                    $val = $(this).val();
+                    $tsh = $('.text-shadow.horizontal').val();
+                    $tsv = $('.text-shadow.vertical').val();
+                    $tsb = $('.text-shadow.blur').val();
+                    $tsd = $('.text-shadow.distance').val();
+//                    var shadow = {$('.text-shadow.horizontal').val(), $('.text-shadow.vertical').val(), $('.text-shadow.blur').val(), $('.text-shadow.distance').val()};
+//                    var styles = {backgroundColor : "#ddd",fontWeight: ""};
+                    console.log($tsh, $tsv, $tsb, $tsd);
+                    //if($(this).hasClass("horizontal")){
+                        //$('input[name='+$id+']').css({'text-shadow':$val+'px', 'height':$val+'px'});
+                });
+                
+                
+                
+                
+         
 //                .keyup(function(){
 //	               $(this).colpickSetColor(this.value);
 //                });

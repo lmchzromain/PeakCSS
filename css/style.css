@@ -360,7 +360,6 @@ HOW TO USE
     margin:23px auto 0 auto;
 }
 
-
 /*=========================
 EXPLORE HIS CAPACITIES
 ==========================*/
@@ -526,24 +525,6 @@ input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
-<<<<<<< HEAD
-=======
-
-/*** Verification form ***/
-#contact_us span.error{
-    margin:0 35px;
-    color:red;
-    font-size:20px;
-    font-weight: 300;
-    padding:15px 5px 15px 5px;
-    width:91%;
-    display:inline;
-    position:relative;
-    float:left;
-    border:2px solid red;
-}
-
->>>>>>> 31def9f7002c125e2c232d4515eeadb7b3c7b54a
 
 /*** Verification form ***/
 #contact_us span.error{
@@ -563,19 +544,6 @@ input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 
-/*** Verification form ***/
-#contact_us span.error{
-    margin:0 35px;
-    color:red;
-    font-size:20px;
-    font-weight: 300;
-    padding:15px 5px 15px 5px;
-    width:91%;
-    display:inline;
-    position:relative;
-    float:left;
-    border:2px solid red;
-}
 /*=========================
 QUOTE
 ==========================*/
