@@ -21,7 +21,7 @@
                 <th>FONT</th>
                 <th>SIZE</th>
                 <th>COLOR</th>
-                <th>SHADOW</th>
+                <th>TEXT-SHADOW</th>
             </tr>
             <tr>
                 <td><input type="text" class="radius-all example" value="Example" name="text1"></td>
@@ -34,7 +34,7 @@
                     </select>
                 </td>
                 <td>
-                    <select>
+                    <select class="size" rel="text1">
 <?php 
     for($i=10; $i<41; $i++){
         echo '<option value="'.$i.'">'.$i.' px</option>';
@@ -43,11 +43,11 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text1" value=""></input></td>
-                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
-                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
-                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
-                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text1" value=""></input></td>
+                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" rel="text1"/>
+                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" rel="text1"/><br>
+                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" rel="text1"/>
+                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="text-shadow distance shadow radius-right" rel="text1"/></td>
             </tr>
             <tr>
                 <td><input type="text" class="radius-all" value="Example" name="text2"></td>
@@ -60,7 +60,7 @@
                     </select>
                 </td>
                 <td>
-                    <select>
+                    <select class="size" rel="text2">
 <?php 
     for($i=10; $i<41; $i++){
         echo '<option value="'.$i.'">'.$i.' px</option>';
@@ -69,7 +69,7 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="text2"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text2"></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
@@ -91,7 +91,7 @@
                 <th>SHADOW</th>
             </tr>
             <tr>
-                <td><input type="button" class="" value="Example"></td>
+                <td><input type="button" class="" value="Example" name="button1"></td>
                 <td>
                     <select>
                         <option>Arial</option>
@@ -101,7 +101,7 @@
                     </select>
                 </td>
                 <td>
-                    <select>
+                    <select class="size" rel="button1">
 <?php 
     for($i=10; $i<41; $i++){
         echo '<option value="'.$i.'">'.$i.' px</option>';
@@ -110,7 +110,7 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker3"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="button1"></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
@@ -131,7 +131,7 @@
                 <th>SHADOW</th>
             </tr>
             <tr>
-                <td><input type="text" class="" value="Example"></td>
+                <td><input type="text" class="" value="Example" name="input1"></td>
                 <td>
                     <select>
                         <option>Arial</option>
@@ -141,7 +141,7 @@
                     </select>
                 </td>
                 <td>
-                    <select>
+                    <select class="size" rel="input1">
 <?php 
     for($i=10; $i<41; $i++){
         echo '<option value="'.$i.'">'.$i.' px</option>';
@@ -150,7 +150,7 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" id="picker4"></input></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="input1"></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
