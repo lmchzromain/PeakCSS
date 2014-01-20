@@ -354,13 +354,6 @@ HOW TO USE
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-<<<<<<< HEAD
-=======
-}
-.pic img{
-    display:block;
-    margin:23px auto 0 auto;
->>>>>>> 1e093d54b6a12d59a0c04b1cb2536bcce12eb3b2
 }
 .pic img{
     display:block;
@@ -388,7 +381,7 @@ EXPLORE HIS CAPACITIES
     height: 340px;
     position:relative;
 }
-.example{
+.thumbnail{
     width: 250px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0.6);

@@ -52,6 +52,11 @@
                     //if($(this).hasClass("horizontal")){
                         //$('input[name='+$id+']').css({'text-shadow':$val+'px', 'height':$val+'px'});
                 });
+                
+                
+                
+                
+         
 //                .keyup(function(){
 //	               $(this).colpickSetColor(this.value);
 //                });
