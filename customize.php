@@ -24,7 +24,7 @@
                 <th>TEXT-SHADOW</th>
             </tr>
             <tr>
-                <td><input type="text" class="radius-all example" value="Example" name="text1"></td>
+                <td><p contenteditable="true" class="radius-all example" name="text1">Example</p></td>
                 <td>
                     <select>
                         <option>Arial</option>
@@ -50,7 +50,7 @@
                     <span class="before-input radius-left shadow">Distance</span><input type="text" class="text-shadow distance shadow radius-right" rel="text1"/></td>
             </tr>
             <tr>
-                <td><input type="text" class="radius-all" value="Example" name="text2"></td>
+                <td><p contenteditable="true" class="radius-all example" name="text2">Example</p></td>
                 <td>
                     <select>
                         <option>Arial</option>

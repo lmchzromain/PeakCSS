@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="css/style.css"/>
-        <link type="text/css" rel="stylesheet" href="css/colpick.css"/>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>PeakCSS - Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
+        <link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <link type="text/css" rel="stylesheet" href="css/colpick.css"/>
+        <link type="text/css" rel="stylesheet" href="css/jquery.textshadow.css"/>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type='text/javascript' src="js/colpick.js"></script>
         <script type='text/javascript' src="js/script.js"></script>
+        <script type='text/javascript' src="js/modernizr.custom.11247.js"></script>
+        <script type='text/javascript' src="js/jquery.textshadow.js"></script>
         <script type='text/javascript'>
             $(document).ready(function(){
                 $('.picker').click(function(){
@@ -27,7 +29,7 @@
                         //console.log(hex);
                         $idpicker = $('[rel='+$id+'].picker').attr('rel');
                         //console.log($idpicker);
-                        $('input[name='+$idpicker+']').css('color','#'+hex);
+                        $('[name='+$idpicker+']').css('color','#'+hex);
                         
                     }
                 });
@@ -35,22 +37,26 @@
                     $id = $(this).attr("rel");
                     console.log("size cliqué :"+$id);
                     $val = $(this).val();
-                    $('input[name='+$id+']').css({'font-size':$val+'px', 'height':$val+'px'});
+                    $('[name='+$id+']').css({'font-size':$val+'px', 'height':$val+'px'});
                 });
                 
-                $('.text-shadow').focus(function(){
+                $('.text-shadow').keyup(function(){
+                    console.log("text-shadow");
                     $id = $(this).attr("rel");
                     console.log("shadow cliqué :"+$id);
 //                    $val = $(this).val();
-                    $tsh = $('.text-shadow.horizontal').val();
-                    $tsv = $('.text-shadow.vertical').val();
-                    $tsb = $('.text-shadow.blur').val();
-                    $tsd = $('.text-shadow.distance').val();
-//                    var shadow = {$('.text-shadow.horizontal').val(), $('.text-shadow.vertical').val(), $('.text-shadow.blur').val(), $('.text-shadow.distance').val()};
-//                    var styles = {backgroundColor : "#ddd",fontWeight: ""};
-                    console.log($tsh, $tsv, $tsb, $tsd);
-                    //if($(this).hasClass("horizontal")){
-                        //$('input[name='+$id+']').css({'text-shadow':$val+'px', 'height':$val+'px'});
+                    $shadow = new Array();
+                    $shadow[0] = $('.text-shadow.horizontal').val();
+                    $shadow[1] = $('.text-shadow.vertical').val();
+                    $shadow[2] = $('.text-shadow.blur').val();
+                    $shadow[3] = $('.text-shadow.distance').val();
+                    for($i=0; $i>4){
+                        if($shadow($i)){
+                    console.log($shadow[0], $shadow[1], $shadow[2], $shadow[3]);
+                    $('[name='+$id+']').textshadow('#000000 0px 0px 0px 0px');
+                    $('[name='+$id+']').textshadowremove();
+                    $('[name='+$id+']').textshadow('#000000'+$shadow[0]+'px'+$shadow[1]+'px'+$shadow[2]+'px'+$shadow[3]+'px');
+                    
                 });
                 
 //                .keyup(function(){
