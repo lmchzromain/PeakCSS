@@ -43,11 +43,12 @@
 ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text1" value=""></input></td>
-                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" rel="text1"/>
-                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" rel="text1"/><br>
-                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" rel="text1"/>
-                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="text-shadow distance shadow radius-right" rel="text1"/></td>
+                <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="text1" value=""></input></td>
+                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" value="0" rel="text1"/>
+                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" value="0" rel="text1"/><br>
+                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" value="0" rel="text1"/>
+                    <span class="before-input radius-left shadow">#</span><input type="text" class="text-shadow shadow picker radius-right" width="40" rel="text1" value=""></input>
+                </td>
             </tr>
             <tr>
                 <td><p contenteditable="true" class="radius-all example" name="text2">Example</p></td>
@@ -70,10 +71,11 @@
                     </select>
                 </td>
                 <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text2"></input></td>
-                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
-                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
-                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
-                    <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
+                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" value="0" rel="text2"/>
+                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" value="0" rel="text2"/><br>
+                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" value="0" rel="text2"/>
+                    <span class="before-input radius-left shadow">#</span><input type="text" class="text-shadow shadow picker radius-right" width="40" rel="text2" value=""></input>
+                </td>
             </tr>
         </table>
     </div>

@@ -16,21 +16,49 @@
         <script type='text/javascript' src="js/jquery.textshadow.js"></script>
         <script type='text/javascript'>
             $(document).ready(function(){
+                $shadowColor='#000';
+                function textShadow(param1){
+                    console.log(param1);
+//                    $id = param1.attr("rel");
+                    $id = param1;
+                    console.log("shadow cliqué :"+$id);
+                    $shadow = new Array();
+                    $shadow[0] = $('[rel='+$id+'].text-shadow.horizontal').val();
+                    $shadow[1] = $('[rel='+$id+'].text-shadow.vertical').val();
+                    $shadow[2] = $('[rel='+$id+'].text-shadow.blur').val();
+                    for($i=0; $i>3; $i++){
+                        if($shadow[$i] == null){
+                            $shadow[$i] = 0;
+                            console.log($shadow[$i]);
+                        }
+                    };
+                    console.log($shadow[0], $shadow[1], $shadow[2]);
+                    $('[name='+$id+']').css({textShadow: $shadow[0] + "px " + $shadow[1] + "px " + $shadow[2] + "px " + ($shadowColor)});
+                    $ombre = $('[name='+$id+']').css('textShadow');
+                    console.log($ombre);
+                };
                 $('.picker').click(function(){
+                    console.log($(this));
                     $id = $(this).attr("rel");
                     console.log("picker cliqué :"+$id);
+                    $(this).hasClass('shadow') ? $pass = 1 : $pass = 0;
+                    console.log($pass);
                 });
                 $('.picker').colpick({
                     layout:'hex',
                     submit:0,
                     colorScheme:'dark',
                     onChange:function(hsb,hex,rgb,fromSetColor) {
-                        if(!fromSetColor) $('[rel='+$id+'].picker').val(hex).css('border-color','#'+hex);
-                        //console.log(hex);
-                        $idpicker = $('[rel='+$id+'].picker').attr('rel');
-                        //console.log($idpicker);
-                        $('[name='+$idpicker+']').css('color','#'+hex);
-                        
+                        if(!fromSetColor && $pass==1){ 
+                            $('[rel='+$id+'].picker.shadow').val(hex).css('border-color','#'+hex);
+                            console.log("shadow");
+                            $shadowColor = '#'+hex;
+                            textShadow($id);
+                        }else{
+                            console.log("pas shadow");
+                            $('[rel='+$id+'].picker.color').val(hex).css('border-color','#'+hex);
+                            $('[name='+$id+']').css('color','#'+hex);
+                        }                        
                     }
                 });
                 $('.size').click(function(){
@@ -41,24 +69,24 @@
                 });
                 
                 $('.text-shadow').keyup(function(){
+//                    $id = $(this).attr("rel");
+//                    console.log("shadow cliqué :"+$id);
+//                    $shadow = new Array();
+//                    $shadow[0] = $('[rel='+$id+'].text-shadow.horizontal').val();
+//                    $shadow[1] = $('[rel='+$id+'].text-shadow.vertical').val();
+//                    $shadow[2] = $('[rel='+$id+'].text-shadow.blur').val();
+//                    for($i=0; $i>3; $i++){
+//                        if($shadow[$i] == null){
+//                            $shadow[$i] = 0;
+//                            console.log($shadow[$i]);
+//                        }
+//                    };
+//                    console.log($shadow[0], $shadow[1], $shadow[2]);
+//                    $('[name='+$id+']').css({textShadow: $shadow[0] + "px " + $shadow[1] + "px " + $shadow[2] + "px " + ($shadowColor)});
+//                    $ombre = $('[name='+$id+']').css('textShadow');
+//                    console.log($ombre);
                     $id = $(this).attr("rel");
-                    console.log("shadow cliqué :"+$id);
-//                    $val = $(this).val();
-                    $shadow = new Array();
-                    $shadow[0] = $('.text-shadow.horizontal').val();
-                    $shadow[1] = $('.text-shadow.vertical').val();
-                    $shadow[2] = $('.text-shadow.blur').val();
-                    $shadow[3] = $('.text-shadow.distance').val();
-                    for($i=0; $i>4; $i++){
-                        if($shadow($i) == null){
-                            $shadow($i) == 0;
-                        }
-                    };
-                    console.log($shadow[0], $shadow[1], $shadow[2], $shadow[3]);
-                    $('[name='+$id+']').textshadow('#000000 0px 0px 0px 0px');
-                    $('[name='+$id+']').textshadowremove();
-                    $('[name='+$id+']').textshadow('#000000'+$shadow[0]+'px'+$shadow[1]+'px'+$shadow[2]+'px'+$shadow[3]+'px');
-                    
+                    textShadow($id);
                 });
                 
 //                .keyup(function(){
