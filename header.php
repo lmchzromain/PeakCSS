@@ -32,6 +32,7 @@
                 function boxShadow(param1){
                     console.log('box-shadow');
                     $id = param1;
+                    console.log('lid du box shadow est'+$id);
                     $shadow = new Array();
                     $shadow[0] = $('[rel='+$id+'].box-shadow.horizontal').val();
                     $shadow[1] = $('[rel='+$id+'].box-shadow.vertical').val();
@@ -46,16 +47,17 @@
                 
                 $('.picker').click(function(){
                     $id = $(this).attr("rel");
+                    console.log($id);
                     $(this).hasClass('shadow') ? $pass = 1 : $pass = 0;
-                    $(this).hasClass('text.shadow') ? $passpass = 1 : $passpass = 0;
-                    console.log($passpass);
+                    $(this).hasClass('text-shadow') ? $passpass = 1 : $passpass = 0;
+                    console.log('passpass ='+$passpass);
                 });
                 $('.picker').colpick({
                     layout:'hex',
                     submit:0,
                     colorScheme:'dark',
-                    onChange:function(hsb,hex,rgb,fromSetColor) 
-                        if(!fromSetColor && $pass==1){ 
+                    onChange:function(hsb,hex,rgb,fromSetColor){
+                        if(!fromSetColor && $pass==1){
                             $('[rel='+$id+'].picker.shadow').val(hex).css('border-color','#'+hex);
                             $shadowColor = '#'+hex;
                             $passpass==1 ? textShadow($id) : boxShadow($id);
@@ -63,7 +65,7 @@
                         }else{
                             $('[rel='+$id+'].picker.color').val(hex).css('border-color','#'+hex);
                             $('[name='+$id+']').css('color','#'+hex);
-                        }                        
+                        }
                     }
                 });
                 $('.size').click(function(){
@@ -88,10 +90,6 @@
                 $('.inset').click(function(){
                     $id = $(this).attr("rel");
                     boxShadow($id);
-                });
-                    console.log("size cliqué :"+$id);
-                    $val = $(this).val();
-                    $('input[name='+$id+']').css({'font-size':$val+'px', 'height':$val+'px'});
                 });
             });
         </script>

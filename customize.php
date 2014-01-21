@@ -158,10 +158,10 @@
                 <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="input1"></input></td>
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="box-shadow horizontal shadow radius-right" value="0" rel="input1"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="box-shadow vertical shadow radius-right" value="0" rel="input1"/>
-                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="box-shadow blur shadow radius-right" value="0" rel="input"/><br>
-                    <span class="before-input radius-left shadow">Spread</span><input type="text" class="box-shadow spread shadow radius-right" value="0" rel="input"/>
+                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="box-shadow blur shadow radius-right" value="0" rel="input1"/><br>
+                    <span class="before-input radius-left shadow">Spread</span><input type="text" class="box-shadow spread shadow radius-right" value="0" rel="input1"/>
                     <span class="before-input radius-all shadow">Inset</span><input type="checkbox" class="box-shadow inset shadow radius-right" rel="input1"/>
-                    <span class="before-input radius-left shadow">#</span><input type="text" class="box-shadow shadow picker radius-right" width="40" rel="input"></input>
+                    <span class="before-input radius-left shadow">#</span><input type="text" class="box-shadow shadow picker radius-right" width="40" rel="input1"></input>
                 </td>
             </tr>
         </table>
