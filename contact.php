@@ -5,6 +5,9 @@
 				<p class="text_contact"> <span> ''</span> A question? A problem? An anomaly?</br>
 				Fill out the form below if you want to get in touch with team. <span>''</span></p>
 
+				<span class="error"><p><img src="./img/attention_form.png" alt="attention" width="20px"/> 
+					The form has not been sent. Please correct and resubmit the form. Thank you!  </p></span>
+
 				<form id="formulaire_contact">
 					<div class="box">
 						<input type="text" class="first" id="name" name="name" placeholder="Your name *"/>
@@ -16,9 +19,6 @@
 						<input type="submit" id="button_send" name="send" value="SEND IT AWAY !" />
 					</div> 
 				</form>
-			<span class="error"><p><img src="./img/attention_form.png" alt="attention" width="15px;"/> 
-					The form has not been sent. You must fill in all the required fields and respect the syntax of fields, 
-					please correct and resubmit the form. Thank you!  </p></span>
 		</div>
 	</div>
 

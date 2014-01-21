@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <link href="css/test_toggle/style.css" rel="stylesheet" type="text/css" />
         <link type="text/css" rel="stylesheet" href="css/colpick.css"/>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type='text/javascript' src="js/colpick.js"></script>
@@ -53,7 +54,7 @@
                     layout:'hex',
                     submit:0,
                     colorScheme:'dark',
-                    onChange:function(hsb,hex,rgb,fromSetColor) {
+                    onChange:function(hsb,hex,rgb,fromSetColor) 
                         if(!fromSetColor && $pass==1){ 
                             $('[rel='+$id+'].picker.shadow').val(hex).css('border-color','#'+hex);
                             $shadowColor = '#'+hex;
@@ -87,6 +88,10 @@
                 $('.inset').click(function(){
                     $id = $(this).attr("rel");
                     boxShadow($id);
+                });
+                    console.log("size cliqué :"+$id);
+                    $val = $(this).val();
+                    $('input[name='+$id+']').css({'font-size':$val+'px', 'height':$val+'px'});
                 });
             });
         </script>

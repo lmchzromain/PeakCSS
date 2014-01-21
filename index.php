@@ -25,7 +25,6 @@ require "header.php";
         </div>
         <div id="custom" class="line">
             <div class="pic">
-                
             </div>
             <div class="text right">
                 <h3>2. Custom</h3>
