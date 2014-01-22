@@ -14,52 +14,83 @@
         <script type='text/javascript' src="js/script.js"></script>
         <script type='text/javascript'>
             $(document).ready(function(){
+                $shadowColor='#000';
+                
+                function textShadow(param1){
+                    $id = param1;
+                    $shadow = new Array();
+                    $shadow[0] = $('[rel='+$id+'].text-shadow.horizontal').val();
+                    $shadow[1] = $('[rel='+$id+'].text-shadow.vertical').val();
+                    $shadow[2] = $('[rel='+$id+'].text-shadow.blur').val();
+                    for($i=0; $i>3; $i++){
+                        if($shadow[$i] == null){
+                            $shadow[$i] = 0;
+                        }
+                    };
+                    $('[name='+$id+']').css({textShadow: $shadow[0] + "px " + $shadow[1] + "px " + $shadow[2] + "px " + ($shadowColor)});
+                };
+                function boxShadow(param1){
+                    console.log('box-shadow');
+                    $id = param1;
+                    console.log('lid du box shadow est'+$id);
+                    $shadow = new Array();
+                    $shadow[0] = $('[rel='+$id+'].box-shadow.horizontal').val();
+                    $shadow[1] = $('[rel='+$id+'].box-shadow.vertical').val();
+                    $shadow[2] = $('[rel='+$id+'].box-shadow.blur').val();
+                    $shadow[3] = $('[rel='+$id+'].box-shadow.spread').val();
+                    $shadow[4] = $('[rel='+$id+'].box-shadow.inset').is(':checked');
+                    $shadow[4]==true ? $shadow[4]= 'inset' : $shadow[4]='';
+                    console.log($shadow[4]);
+                    console.log($shadow[0] + $shadow[1] + $shadow[2] + $shadow[3] + $shadow[4]);
+                    $('[name='+$id+']').css({boxShadow: $shadow[0] + "px " + $shadow[1] + "px " + $shadow[2] + "px " + $shadow[3] + "px " + ($shadowColor) + $shadow[4]});
+                };
+                
                 $('.picker').click(function(){
                     $id = $(this).attr("rel");
-                    console.log("picker cliqué :"+$id);
+                    console.log($id);
+                    $(this).hasClass('shadow') ? $pass = 1 : $pass = 0;
+                    $(this).hasClass('text-shadow') ? $passpass = 1 : $passpass = 0;
+                    console.log('passpass ='+$passpass);
                 });
                 $('.picker').colpick({
                     layout:'hex',
                     submit:0,
                     colorScheme:'dark',
-                    onChange:function(hsb,hex,rgb,fromSetColor) {
-                        if(!fromSetColor) $('[rel='+$id+'].picker').val(hex).css('border-color','#'+hex);
-                        //console.log(hex);
-                        $idpicker = $('[rel='+$id+'].picker').attr('rel');
-                        //console.log($idpicker);
-                        $('input[name='+$idpicker+']').css('color','#'+hex);
-                        
+                    onChange:function(hsb,hex,rgb,fromSetColor){
+                        if(!fromSetColor && $pass==1){
+                            $('[rel='+$id+'].picker.shadow').val(hex).css('border-color','#'+hex);
+                            $shadowColor = '#'+hex;
+                            $passpass==1 ? textShadow($id) : boxShadow($id);
+                            console.log('shadow');
+                        }else{
+                            $('[rel='+$id+'].picker.color').val(hex).css('border-color','#'+hex);
+                            $('[name='+$id+']').css('color','#'+hex);
+                        }
                     }
                 });
                 $('.size').click(function(){
                     $id = $(this).attr("rel");
-                    console.log("size cliqué :"+$id);
+                    $type = $('[name='+$id+']').attr("type");
                     $val = $(this).val();
-                    $('input[name='+$id+']').css({'font-size':$val+'px', 'height':$val+'px'});
+                    $type=='text' ? $('[name='+$id+']').css({'font-size':$val+'px', 'height':$val+'px'}) : $('[name='+$id+']').css('font-size',$val+'px');
                 });
-                
-                $('.text-shadow').focus(function(){
+                $('.font').click(function(){
                     $id = $(this).attr("rel");
-                    console.log("shadow cliqué :"+$id);
-//                    $val = $(this).val();
-                    $tsh = $('.text-shadow.horizontal').val();
-                    $tsv = $('.text-shadow.vertical').val();
-                    $tsb = $('.text-shadow.blur').val();
-                    $tsd = $('.text-shadow.distance').val();
-//                    var shadow = {$('.text-shadow.horizontal').val(), $('.text-shadow.vertical').val(), $('.text-shadow.blur').val(), $('.text-shadow.distance').val()};
-//                    var styles = {backgroundColor : "#ddd",fontWeight: ""};
-                    console.log($tsh, $tsv, $tsb, $tsd);
-                    //if($(this).hasClass("horizontal")){
-                        //$('input[name='+$id+']').css({'text-shadow':$val+'px', 'height':$val+'px'});
+                    $val = $(this).val();
+                    $('[name='+$id+']').css('font-family',$val);
                 });
-                
-                
-                
-                
-         
-//                .keyup(function(){
-//	               $(this).colpickSetColor(this.value);
-//                });
+                $('.text-shadow').keyup(function(){
+                    $id = $(this).attr("rel");
+                    textShadow($id);
+                });
+                $('.box-shadow').keyup(function(){
+                    $id = $(this).attr("rel");
+                    boxShadow($id);
+                });
+                $('.inset').click(function(){
+                    $id = $(this).attr("rel");
+                    boxShadow($id);
+                });
             });
         </script>
     </head>
