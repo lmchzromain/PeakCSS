@@ -19,38 +19,35 @@
                 function textShadow(param1){
                     $id = param1;
                     $shadow = new Array();
-                    $shadow[0] = $('[rel='+$id+'].text-shadow.horizontal').val();
-                    $shadow[1] = $('[rel='+$id+'].text-shadow.vertical').val();
-                    $shadow[2] = $('[rel='+$id+'].text-shadow.blur').val();
-                    for($i=0; $i>3; $i++){
-                        if($shadow[$i] == null){
-                            $shadow[$i] = 0;
-                        }
-                    };
-                    $('[name='+$id+']').css({textShadow: $shadow[0] + "px " + $shadow[1] + "px " + $shadow[2] + "px " + ($shadowColor)});
+                    $x = $('[rel='+$id+'].text-shadow.horizontal').val();
+                    $y = $('[rel='+$id+'].text-shadow.vertical').val();
+                    $blur = $('[rel='+$id+'].text-shadow.blur').val();
+                    $('[name='+$id+']').css({textShadow: $x + "px " + $y + "px " + $blur + "px " + ($shadowColor)});
                 };
                 function boxShadow(param1){
-                    console.log('box-shadow');
                     $id = param1;
-                    console.log('lid du box shadow est'+$id);
+                    console.log($id);
                     $shadow = new Array();
-                    $shadow[0] = $('[rel='+$id+'].box-shadow.horizontal').val();
-                    $shadow[1] = $('[rel='+$id+'].box-shadow.vertical').val();
-                    $shadow[2] = $('[rel='+$id+'].box-shadow.blur').val();
-                    $shadow[3] = $('[rel='+$id+'].box-shadow.spread').val();
-                    $shadow[4] = $('[rel='+$id+'].box-shadow.inset').is(':checked');
-                    $shadow[4]==true ? $shadow[4]= 'inset' : $shadow[4]='';
-                    console.log($shadow[4]);
-                    console.log($shadow[0] + $shadow[1] + $shadow[2] + $shadow[3] + $shadow[4]);
-                    $('[name='+$id+']').css({boxShadow: $shadow[0] + "px " + $shadow[1] + "px " + $shadow[2] + "px " + $shadow[3] + "px " + ($shadowColor) + $shadow[4]});
+                    $x = $('[rel='+$id+'].box-shadow.horizontal').val();
+                    $y = $('[rel='+$id+'].box-shadow.vertical').val();
+                    $blur = $('[rel='+$id+'].box-shadow.blur').val();
+                    $spread = $('[rel='+$id+'].box-shadow.spread').val();
+//                    $inset = $('[rel='+$id+'].box-shadow.inset').is(':checked');
+//                    $inset==true ? $inset= 'inset' : $inset='';
+                    $inset='';
+                    $('[rel='+$id+'].box-shadow.inset').is(':checked') ? $inset= 'inset' : $inset='';
+                    console.log('inset = '+$inset+' x = '+$x+' y = '+$y+' blur = '+$blur+' spread = '+$spread+' '+$shadowColor);
+                    $style= $inset+' '+$x+'px '+$y+'px '+$blur+'px '+$spread+'px '+$shadowColor;
+                    console.log($style);
+                    $('[name='+$id+']').css("box-shadow", $style);
+//                    $('name='+$id+']').css("box-shadow",$style);
+//                    $('[name='+$id+']').css({box-shadow: $x+"px"+$y+"px "+$blur+"px "+$spread+"px "+$shadowColor+' '+$inset});
                 };
                 
                 $('.picker').click(function(){
                     $id = $(this).attr("rel");
-                    console.log($id);
                     $(this).hasClass('shadow') ? $pass = 1 : $pass = 0;
                     $(this).hasClass('text-shadow') ? $passpass = 1 : $passpass = 0;
-                    console.log('passpass ='+$passpass);
                 });
                 $('.picker').colpick({
                     layout:'hex',
@@ -61,7 +58,6 @@
                             $('[rel='+$id+'].picker.shadow').val(hex).css('border-color','#'+hex);
                             $shadowColor = '#'+hex;
                             $passpass==1 ? textShadow($id) : boxShadow($id);
-                            console.log('shadow');
                         }else{
                             $('[rel='+$id+'].picker.color').val(hex).css('border-color','#'+hex);
                             $('[name='+$id+']').css('color','#'+hex);
