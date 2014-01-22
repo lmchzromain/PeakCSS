@@ -19,7 +19,6 @@
 						<input type="submit" id="button_send" name="send" value="SEND IT AWAY !" />
 					</div> 
 				</form>
-			
 		</div>
 	</div>
 

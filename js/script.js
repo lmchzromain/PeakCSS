@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	/*====================================================
                 Gestion des toggles
     ====================================================*/
@@ -26,6 +25,10 @@ $(document).ready(function(){
 
     /*====================================================
                 Gestion des display toggles
+                
+                MATHIEU TODO:
+                Les display: none peuvent se faire en une ligne avec une classe
+                Le toggle peut se faire en une dizaine de ligne
     ====================================================*/
     	$('#toggle_text').css({display : 'none'});
     	$('#toggle_button').css({display : 'none'});
@@ -133,7 +136,6 @@ $(document).ready(function(){
                     return true;
 	            }               	
         });
-
 		
         $("#button_send").click(function(){			
 			/** Champs de saisie Why to contact us ? **/
@@ -152,7 +154,7 @@ $(document).ready(function(){
         });  
 
         $("#button_send").click(function(){			
-			/** Champs de saisie Nom **/
+			/** Champs de saisie TEXTAREA **/
 	            if($(".text_besoin").val() == ""){
 		            $(".error").css({display : 'inline'});
 		            display_error($('.text_besoin'));
