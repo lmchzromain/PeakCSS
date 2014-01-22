@@ -555,6 +555,28 @@ textarea:-moz-placeholder{color:white;font-family:'Raleway', sans-serif;}
 }
 
 /*=========================
+Send MAIL
+==========================*/
+.summary_01{
+    background-color: rgba(255,255,255,0.2);
+    color:#ffffff;
+    font-family:'Raleway', sans-serif;
+    font-size: 20px;
+    padding-left: 20%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    margin-bottom: 25px;
+}
+.summary{
+    background-color: rgba(255,255,255,0.2);
+    color:#ffffff;
+    font-family:'Raleway', sans-serif;
+    font-size: 20px;
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+/*=========================
 QUOTE
 ==========================*/
 #quote{
