@@ -1,49 +1,12 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <link href="css/test_toggle/style.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"> </script>
-        <script type="text/javascript"> 
-        $(document).ready(function(){
-            /*====================================================
-                Gestion des toggles
-            ====================================================*/
-                //ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
-                $('.accordionButton').click(function() {
-                    $('.accordionButton').removeClass('on');
-                    $('.accordionContent').slideUp('normal');
-                    if($(this).next().is(':hidden') == true) {
-                        $(this).addClass('on');
-                        $(this).next().slideDown('normal');
-                     }        
-                 });  
-                
-                /*** REMOVE IF MOUSEOVER IS NOT REQUIRED ***/
-                
-                //ADDS THE .OVER CLASS FROM THE STYLESHEET ON MOUSEOVER 
-                $('.accordionButton').mouseover(function() {
-                    $(this).addClass('over');
-                }).mouseout(function() {
-                    $(this).removeClass('over');                                        
-                });
-                
-                $('.accordionContent').hide();
-        });
-
-        </script>
-    </head>
-
-    <body>
-
 <?php require 'header.php'; ?>
 <div id="choice_box">
     <div class="choice">
         <form>
-            <input type="checkbox" name="text" value="Text"> Text </input>
-            <input type="checkbox" name="button" value="Button"> Button </input>
-			<input type="checkbox" name="input" value="Input"> Input </input>
-			<input type="checkbox" name="block" value="Block"> Block </input>
-			<input type="checkbox" name="table" value="Table"> Table </input>
+            <input type="checkbox" name="text" value="Text" checked="checked"> Text </input>
+            <input type="checkbox" name="button" value="Button" checked="checked"> Button </input>
+			<input type="checkbox" name="input" value="Input" checked="checked"> Input </input>
+			<input type="checkbox" name="block" value="Block" checked="checked"> Block </input>
+			<input type="checkbox" name="table" value="Table" checked="checked"> Table </input>
         </form>
     </div>
 </div>
@@ -51,7 +14,8 @@
 <!-- SECTION ==> Texte -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Texte</p></div>
+          
+            <div class="accordionButton custom_text"><p>Texte</p></div>
             <div class="accordionContent">
                  <table>
                     <tr>
@@ -124,13 +88,13 @@
                     </tr>
                 </table>
             </div>
-        </div>     
+        </div>         
     </section>
 
 <!-- SECTION ==> Button -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Button</p></div>
+            <div class="accordionButton custom_button"><p>Button</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
@@ -174,7 +138,7 @@
 <!-- SECTION ==> Input -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Input</p></div>
+            <div class="accordionButton custom_input"><p>Input</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
@@ -218,7 +182,7 @@
 <!-- SECTION ==> Block -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Block</p></div>
+            <div class="accordionButton custom_block"><p>Block</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
@@ -262,7 +226,7 @@
 <!-- SECTION ==> Table -->
     <section>
         <div id="wrapper">
-            <div class="accordionButton"><p>Table</p></div>
+            <div class="accordionButton custom_table"><p>Table</p></div>
             <div class="accordionContent">
                  <table>
                 <tr>
@@ -304,8 +268,3 @@
     </section>
 
 <?php require 'footer.php'; ?>
-
-</body>
-</html>
-
-

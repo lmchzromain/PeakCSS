@@ -12,7 +12,7 @@
 </div>
 <section>
     <div class="toggle_text">
-        <a href="" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Text</a>
+        <a href="" class="toggler">Text</a>
     </div>	
     <div class="toggle">
         <table>
@@ -24,9 +24,9 @@
                 <th>TEXT-SHADOW</th>
             </tr>
             <tr>
-                <td><input type="text" class="radius-all example" value="Example" name="text1"></td>
+                <td><p contenteditable="true" class="radius-all example" name="text1">Example</p></td>
                 <td>
-                    <select>
+                    <select class="font" rel="text1">
                         <option>Arial</option>
                         <option>Helvetica</option>
                         <option>Cambria</option>
@@ -43,43 +43,45 @@ for($i=10; $i<41; $i++){
                         ?>
                     </select>
                 </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text1" value=""></input></td>
-        <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" rel="text1"/>
-            <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" rel="text1"/><br>
-            <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" rel="text1"/>
-            <span class="before-input radius-left shadow">Distance</span><input type="text" class="text-shadow distance shadow radius-right" rel="text1"/></td>
-    </tr>
-    <tr>
-        <td><input type="text" class="radius-all" value="Example" name="text2"></td>
-        <td>
-            <select>
-                <option>Arial</option>
-                <option>Helvetica</option>
-                <option>Cambria</option>
-                <option>Times New Roman</option>
-            </select>
-        </td>
-        <td>
-            <select class="size" rel="text2">
-                <?php 
+                <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="text1"></input></td>
+        <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" value="0" rel="text1"/>
+            <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" value="0" rel="text1"/><br>
+            <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" value="0" rel="text1"/>
+            <span class="before-input radius-left shadow">#</span><input type="text" class="text-shadow shadow picker radius-right" width="40" rel="text1"></input>
+</td>
+</tr>
+<tr>
+    <td><p contenteditable="true" class="radius-all example" name="text2">Example</p></td>
+    <td>
+        <select class="select" rel="text2">
+            <option>Arial</option>
+            <option>Helvetica</option>
+            <option>Cambria</option>
+            <option>Times New Roman</option>
+        </select>
+    </td>
+    <td>
+        <select class="size" rel="text2">
+            <?php 
 for($i=10; $i<41; $i++){
     echo '<option value="'.$i.'">'.$i.' px</option>';
     $i++;
 }
-                ?>
-            </select>
-        </td>
-        <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="text2"></input></td>
-<td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
-    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
-    <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
-    <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
+            ?>
+        </select>
+    </td>
+    <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="text2"></input></td>
+<td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" value="0" rel="text2"/>
+    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" value="0" rel="text2"/><br>
+    <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" value="0" rel="text2"/>
+    <span class="before-input radius-left shadow">#</span><input type="text" class="text-shadow shadow picker radius-right" width="40" rel="text2"></input>
+</td>
 </tr>
 </table>
 </div>
 
 <div class="toggle_text">
-    <a href="" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Button</a>
+    <a href="" class="toggler">Button</a>
 </div>	
 <div class="toggle">
     <table>
@@ -88,12 +90,12 @@ for($i=10; $i<41; $i++){
             <th>FONT</th>
             <th>SIZE</th>
             <th>COLOR</th>
-            <th>SHADOW</th>
+            <th>BOX-SHADOW</th>
         </tr>
         <tr>
             <td><input type="button" class="" value="Example" name="button1"></td>
             <td>
-                <select>
+                <select class="font" rel="button1">
                     <option>Arial</option>
                     <option>Helvetica</option>
                     <option>Cambria</option>
@@ -110,16 +112,19 @@ for($i=10; $i<41; $i++){
                     ?>
                 </select>
             </td>
-            <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="button1"></input></td>
-    <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
-        <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
-        <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
-        <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
+            <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="button1"></input></td>
+    <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="box-shadow horizontal shadow radius-right" value="0" rel="button1"/>
+        <span class="before-input radius-left shadow">Vertical</span><input type="text" class="box-shadow vertical shadow radius-right" value="0" rel="button1"/>
+        <span class="before-input radius-left shadow">Blur</span><input type="text" class="box-shadow blur shadow radius-right" value="0" rel="button1"/><br>
+        <span class="before-input radius-left shadow">Spread</span><input type="text" class="box-shadow spread shadow radius-right" value="0" rel="button1"/>
+        <span class="before-input radius-all shadow">Inset</span><input type="checkbox" class="box-shadow inset shadow radius-right" rel="button1"/>
+        <span class="before-input radius-left shadow">#</span><input type="text" class="box-shadow shadow picker radius-right" width="40" rel="button1"></input>
+</td>
 </tr>
 </table>
 </div>
 <div class="toggle_text">
-    <a href="" class="toggler"><!--<img class="fleche" src="img/fleche_bas.png" alt="fleche" width="15px">-->Input</a>
+    <a href="" class="toggler">Input</a>
 </div>	
 <div class="toggle">
     <table>
@@ -128,12 +133,12 @@ for($i=10; $i<41; $i++){
             <th>FONT</th>
             <th>SIZE</th>
             <th>COLOR</th>
-            <th>SHADOW</th>
+            <th>BOX-SHADOW</th>
         </tr>
         <tr>
             <td><input type="text" class="" value="Example" name="input1"></td>
             <td>
-                <select>
+                <select class="font" rel="input1">
                     <option>Arial</option>
                     <option>Helvetica</option>
                     <option>Cambria</option>
@@ -150,14 +155,16 @@ for($i=10; $i<41; $i++){
                     ?>
                 </select>
             </td>
-            <td><span class="before-input radius-left">#</span><input type="text" class="picker radius-right" rel="input1"></input></td>
-    <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="shadow radius-right" name="horizontal"/>
-        <span class="before-input radius-left shadow">Vertical</span><input type="text" class="shadow radius-right" name="vertical"/><br>
-        <span class="before-input radius-left shadow">Blur</span><input type="text" class="shadow radius-right" name="blur"/>
-        <span class="before-input radius-left shadow">Distance</span><input type="text" class="shadow radius-right" name="distance"/></td>
+            <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="input1"></input></td>
+    <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="box-shadow horizontal shadow radius-right" value="0" rel="input1"/>
+        <span class="before-input radius-left shadow">Vertical</span><input type="text" class="box-shadow vertical shadow radius-right" value="0" rel="input1"/>
+        <span class="before-input radius-left shadow">Blur</span><input type="text" class="box-shadow blur shadow radius-right" value="0" rel="input1"/><br>
+        <span class="before-input radius-left shadow">Spread</span><input type="text" class="box-shadow spread shadow radius-right" value="0" rel="input1"/>
+        <span class="before-input radius-all shadow">Inset</span><input type="checkbox" class="box-shadow inset shadow radius-right" rel="input1"/>
+        <span class="before-input radius-left shadow">#</span><input type="text" class="box-shadow shadow picker radius-right" width="40" rel="input1"></input>
+</td>
 </tr>
 </table>
-</div>
 </section>
 <section>
     <div id="css_generate">
@@ -165,7 +172,7 @@ for($i=10; $i<41; $i++){
             <textarea name="stylecss"></textarea>
             <br>
             <input type="submit" value="Download" />
-        </form>
+        </form>   
     </div>
 </section>
 <?php
@@ -179,7 +186,31 @@ if (!empty($_POST)){
     fclose($opencss); 
     
     //Création du fichier html
-    $textehtml="test";
+        $textehtml="    
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset='utf-8'>
+        <title>PeakCSS - Démo</title>
+        <meta name='viewport' content='width=device-width'>
+        <link type='text/css' rel='stylesheet' href='PeakCSS.css'/>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div style='max-width:75%; min-width:800px;margin:auto;position:relative;'>
+			<H1 style='color:#3a85bc; font-size:40px; font-family:Raleway; font-weight:100; text-align:center; margin-bottom:50px'>PeakCSS</H1>
+			
+			<p style='color:#3a85bc; margin-top:50px'>Example</p>
+			<div style='padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
+				<code type='html'>
+					<span style='color:#3a85bc'>&lt;p</span>
+					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>='test'</span><span style='color:#3a85bc'>&gt;</span><span>Example</span><span style='color:#3a85bc'>&lt;/p&gt;</span>
+				</code>
+			</div>
+			
+		</div>
+	</body>
+</html>";
     $filenamehtml = "PeakHtml"; 
     $openhtml = fopen("download/".$filenamehtml.".html", "w");
     fwrite($openhtml, $textehtml); 
