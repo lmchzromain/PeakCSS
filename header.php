@@ -94,7 +94,7 @@
         <header>
             <div class="content">
                 <h1>
-                    <a href="index.php">PEAK<span class='logo_css'>CSS</span></a>
+                    <a href="index.php">PEAK CSS</a>
                 </h1>
                 <nav>
                     <ul>
