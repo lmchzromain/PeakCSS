@@ -183,35 +183,80 @@ if (!empty($_POST)){
     $filenamecss = "PeakCSS"; 
     $opencss = fopen("download/".$filenamecss.".css", "w");
     fwrite($opencss, $stylecss); 
-    fclose($opencss); 
+    fclose($opencss);
+    
+    $name_tag = array('text','input','button');
+    foreach ($name_tag as $test){
+        preg_match_all('#('.$test.'[0-9]+)#', $stylecss,$tab_{$test});
+        ${$test} = $tab_{$test}[1];  
+    }
     
     //Création du fichier html
-        $textehtml="    
+    $textehtml="
 <!DOCTYPE html>
 <html>
 	<head>
         <meta charset='utf-8'>
-        <title>PeakCSS - Démo</title>
+        <title>PeakCSS - Demo</title>
         <meta name='viewport' content='width=device-width'>
         <link type='text/css' rel='stylesheet' href='PeakCSS.css'/>
+        <link type='text/css' rel='stylesheet' href='PeakRESET.css'/>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div style='max-width:75%; min-width:800px;margin:auto;position:relative;'>
-			<H1 style='color:#3a85bc; font-size:40px; font-family:Raleway; font-weight:100; text-align:center; margin-bottom:50px'>PeakCSS</H1>
-			
-			<p style='color:#3a85bc; margin-top:50px'>Example</p>
-			<div style='padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
-				<code type='html'>
-					<span style='color:#3a85bc'>&lt;p</span>
-					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>='test'</span><span style='color:#3a85bc'>&gt;</span><span>Example</span><span style='color:#3a85bc'>&lt;/p&gt;</span>
-				</code>
-			</div>
-			
-		</div>
-	</body>
-</html>";
-    $filenamehtml = "PeakHtml"; 
+			<H1 style='color:#3a85bc; font-size:40px; font-family:Raleway; font-weight:100; text-align:center; margin:50px 0'>PeakCSS</H1>";
+    foreach ($text as $name_class) {
+        $textehtml .=
+            "<p class=".$name_class.">Lorem ipsum</p>
+    			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
+    				<code type='html'>
+    					<span style='color:#3a85bc'>&lt;p</span>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
+    					<span>Lorem ipsum</span>
+    					<span style='color:#3a85bc'>&lt;/p&gt;</span>
+    				</code>
+    			</div>";
+    }
+    foreach ($input as $name_class) {
+        $textehtml .=
+            "<input type='text' class=".$name_class." placeholder='text' />
+    			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
+    				<code type='html'>
+    					<span style='color:#3a85bc'>&lt;input</span>
+    				    <span style='color:#27ae60'>type</span><span style='color:#c0392b'>=\"text\"</span><span style='color:#3a85bc'>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span>
+    					<span style='color:#27ae60'>placeholder</span><span style='color:#c0392b'>=\"text\"</span>
+    					<span style='color:#3a85bc'>/&gt;</span>
+    				</code>
+    			</div>";
+    }
+    foreach ($button as $name_class) {
+        $textehtml .=
+            "<a class=".$name_class." href='#'></a>
+    			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
+    				<code type='html'>
+    					<span style='color:#3a85bc'>&lt;a</span>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
+    					<span>Link</span>
+    					<span style='color:#3a85bc'>&lt;/a&gt;</span>
+    					<span style='color:#939393'>/* OR */</span>
+    					</br>
+    					<span style='color:#3a85bc'>&lt;button</span>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
+    					<span>Link</span>
+    					<span style='color:#3a85bc'>&lt;/button&gt;</span>
+    					<span style='color:#939393'>/* OR */</span>
+    					</br>
+    				    <span style='color:#3a85bc'>&lt;input</span>
+    				    <span style='color:#27ae60'>type</span><span style='color:#c0392b'>=\"submit\"</span><span style='color:#3a85bc'>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span>
+    					<span style='color:#3a85bc'>/&gt;</span>
+    				</code>
+    			</div>";
+    }
+    $textehtml .= "</div></body></html>";
+    $filenamehtml = "PeakHTML"; 
     $openhtml = fopen("download/".$filenamehtml.".html", "w");
     fwrite($openhtml, $textehtml); 
     fclose($openhtml); 
@@ -221,15 +266,16 @@ if (!empty($_POST)){
     if($zip->open('download/PeakCSS.zip', ZipArchive::CREATE) == TRUE){
         $zip->addFile('download/PeakHTML.html','PeakHTML.html');
         $zip->addFile('download/PeakCSS.css','PeakCSS.css');
+        $zip->addFile('download/PeakRESET.css','PeakRESET.css');
         $zip->close();
     }else{
         echo 'Impossible de récupérer le fichier';
     }    
     
-    //Téléchargement 
+    //Téléchargement
     header('Content-Type: text/plain');
     header('Content-Disposition: attachment; filename="PeakCSS.zip"');
-    readfile('download/PeakCSS.zip');
+    readfile('download/peakCSS.zip');
     unlink('download/PeakHTML.html');
     unlink('download/PeakCSS.css');
     unlink('download/PeakCSS.zip');
