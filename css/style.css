@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,600);
 
 /*===COLOR===
 Bleu : #3a85bc
@@ -79,13 +79,10 @@ header h1 a{
     font-size: 35px;	
     color: #3a85bc;	
     line-height: 70px;
-    font-weight: 100;
+    font-weight: 600;
 }
-header h1 span{
-    font-weight:bold;
-}
-header h1 img{
-    width: 40px;
+.logo_css{
+    font-weight:100;
 }
 header nav{
     display:inline-block;
