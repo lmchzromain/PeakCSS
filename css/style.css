@@ -79,10 +79,7 @@ header h1 a{
     font-size: 35px;	
     color: #3a85bc;	
     line-height: 70px;
-    font-weight: 100;
-}
-header h1 span{
-    font-weight:bold;
+    font-weight: 600;
 }
 header nav{
     display:inline-block;
