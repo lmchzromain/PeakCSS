@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,600);
 
 /*===COLOR===
 Bleu : #3a85bc
@@ -79,13 +79,7 @@ header h1 a{
     font-size: 35px;	
     color: #3a85bc;	
     line-height: 70px;
-    font-weight: 100;
-}
-header h1 span{
-    font-weight:bold;
-}
-header h1 img{
-    width: 40px;
+    font-weight: 600;
 }
 header nav{
     display:inline-block;
@@ -234,6 +228,44 @@ h5{
     font-weight:100;
     font-style:italic;
 }
+#css_generate{
+    margin:80px 0 60px 4%;
+}
+#css_generate textarea{
+    padding:20px;
+    width: 500px;
+    height: 350px;
+    background-color: #ddd;
+    opacity:0.5;
+    color:#000;
+    border: solid 1px #848484;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    resize:none;
+    font-family:'raleway';
+}
+#css_generate textarea:focus{
+    outline:none;
+}
+#css_generate input{
+    margin-top:15px;
+    width: 200px;
+    height: 40px;
+    background-color: #3a85bc;
+    color:#fff;
+    font-weight:400;
+    font-size:20px;
+    border-radius:2px;
+    border:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
 /*===============================
 Page de test sur customize2
 ===============================*/
@@ -312,7 +344,7 @@ PEAK PHOTO HOME
     padding:14px 53px;
     right: 30px;
 }
-#bt_howuse:hover, #bt_customize:hover, #bt_explore:hover, .pic:hover{background-color: #2379b7;box-shadow:3px 3px 1px 1px rgba(150,150,150,0.5);}
+#bt_howuse:hover, #bt_customize:hover, #bt_explore:hover, .pic:hover, #css_generate input:hover{background-color: #2379b7;box-shadow:3px 3px 1px 1px rgba(150,150,150,0.5);}
 /*=========================
 HOW TO USE
 ==========================*/
@@ -325,18 +357,18 @@ HOW TO USE
 .right{
     float:right;
 }
-.text{
+.description{
     display: inline-block;
     width: 75%;
     height: 200px;
 }
-.text h3{
+.description h3{
     margin-top: 10px;
     color:#3f3f3f;
     font-size:40px;
     font-weight:300;
 }
-.text p{
+.description p{
     margin-top: 15px;
     text-align:justify;
     font-style:italic;
@@ -361,6 +393,7 @@ HOW TO USE
     display:block;
     margin:23px auto 0 auto;
 }
+
 
 /*=========================
 EXPLORE HIS CAPACITIES
@@ -394,7 +427,6 @@ EXPLORE HIS CAPACITIES
     -o-box-shadow: 0px 1px 10px 0px #969696;
     box-shadow: 0px 1px 10px 0px #969696;
 }
-
 .thumbnail:nth-child(2){
     left:50%;
     margin-left: -125px;

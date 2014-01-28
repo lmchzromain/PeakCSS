@@ -2,7 +2,7 @@
 	<div id="contact_us"> 
 		<div class="content">
 			<h2> CONTACT US </h2>			
-				<p class="text_contact"> <span> ''</span> A question? A problem? An anomaly?</br>
+				<p class="text_contact"><span>''</span> A question? A problem? An anomaly?</br>
 				Fill out the form below if you want to get in touch with team. <span>''</span></p>
 
 				<span class="error"><p><img src="./img/attention_form.png" alt="attention" width="20px"/> 
