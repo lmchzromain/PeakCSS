@@ -24,7 +24,7 @@
                 <th>TEXT-SHADOW</th>
             </tr>
             <tr>
-                <td><p contenteditable="true" class="radius-all example" name="text1">Example</p></td>
+                <td><p contenteditable="true" class="radius-all example text" name="text1">Example</p></td>
                 <td>
                     <select class="font" rel="text1">
                         <option>Arial</option>
@@ -51,7 +51,7 @@ for($i=10; $i<41; $i++){
 </td>
 </tr>
 <tr>
-    <td><p contenteditable="true" class="radius-all example" name="text2">Example</p></td>
+    <td><p contenteditable="true" class="radius-all example text" name="text2">Example</p></td>
     <td>
         <select class="select" rel="text2">
             <option>Arial</option>
@@ -93,7 +93,7 @@ for($i=10; $i<41; $i++){
             <th>BOX-SHADOW</th>
         </tr>
         <tr>
-            <td><input type="button" class="" value="Example" name="button1"></td>
+            <td><input type="button" class="example" value="Example" name="button1"></td>
             <td>
                 <select class="font" rel="button1">
                     <option>Arial</option>
@@ -136,7 +136,7 @@ for($i=10; $i<41; $i++){
             <th>BOX-SHADOW</th>
         </tr>
         <tr>
-            <td><input type="text" class="" value="Example" name="input1"></td>
+            <td><input type="text" class="example" value="Example" name="input1"></td>
             <td>
                 <select class="font" rel="input1">
                     <option>Arial</option>
@@ -169,7 +169,7 @@ for($i=10; $i<41; $i++){
 <section>
     <div id="css_generate">
         <form action="customize.php" method="post">
-            <textarea name="stylecss"></textarea>
+            <textarea readonly id="stylecss" name="stylecss"></textarea>
             <br>
             <input type="submit" value="Download" />
         </form>   
@@ -233,7 +233,7 @@ if (!empty($_POST)){
     }
     foreach ($button as $name_class) {
         $textehtml .=
-            "<a class=".$name_class." href='#'></a>
+            "<a class=".$name_class." href='#' onclick='return false'>Button</a>
     			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
     				<code type='html'>
     					<span style='color:#3a85bc'>&lt;a</span>

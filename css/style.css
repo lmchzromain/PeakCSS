@@ -357,18 +357,18 @@ HOW TO USE
 .right{
     float:right;
 }
-.text{
+.description{
     display: inline-block;
     width: 75%;
     height: 200px;
 }
-.text h3{
+.description h3{
     margin-top: 10px;
     color:#3f3f3f;
     font-size:40px;
     font-weight:300;
 }
-.text p{
+.description p{
     margin-top: 15px;
     text-align:justify;
     font-style:italic;

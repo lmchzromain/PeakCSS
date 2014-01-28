@@ -237,7 +237,7 @@
                     <th>SHADOW</th>
                 </tr>
                 <tr>
-                    <td><input type="button" class="" value="Example"></td>
+                    <td><input type="button" class="example" value="Example"></td>
                     <td>
                         <select>
                             <option>Arial</option>

@@ -37,6 +37,22 @@ $(document).ready(function(){
         }
     });
     
+    /*====================================================
+                Gestion de l'affichage dans le textarea
+    ====================================================*/
+    
+    setInterval(function(){
+        $('#stylecss').val('');
+        $(".example").each(function( index ) {
+            if($(this).attr('style') != undefined){
+                var test = $(this).attr('style');
+                test = test.replace(/;/g, ';\n');
+                $('#stylecss').val($('#stylecss').val()+'.'+$(this).attr('name')+'{\n '+test+'}\n\n');
+                console.log(test);
+            };
+        });
+    },500); 
+
     
     /*====================================================
 				Gestion du formualaires
