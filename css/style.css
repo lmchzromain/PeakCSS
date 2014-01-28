@@ -84,9 +84,6 @@ header h1 a{
 header h1 span{
     font-weight:bold;
 }
-header h1 img{
-    width: 40px;
-}
 header nav{
     display:inline-block;
     position:absolute;
@@ -588,6 +585,70 @@ QUOTE
 FOOTER
 ==========================*/
 footer{
-    background-color: #0c0c0c;
-    height: 230px;
+    background-color: #222;
+    height: 210px;
+    border-top: 2px solid #3a85bc;
 }
+/** Box 1 **/ 
+    .box1{
+        width: 33%;
+        float:left;
+    }    
+    .box1 h3{
+        margin-left: 10%;
+        font-style:none;
+        width: auto;
+        font-size: 35px;
+        line-height: 70px;
+        font-weight:bold;        
+        color: rgba(51,51,51,0.6);
+        text-shadow: rgba(0,0,0,1) 0px 3px 3px;
+    }      
+    .box1 ul{
+        font-size: 18px;
+        margin-left: 17%;
+    }
+    .box1 ul li{
+        padding: 5px;
+    }
+    .box1 ul li a{
+        text-decoration: none;
+        color: rgb(255,255,255);
+    }
+    
+/** Box centrale **/
+    .box_center{
+        width: 30%;
+        height:0px;
+        margin-left:35%;
+        position:relative;        
+    }
+    .box_center p{
+        padding-top: 60%;
+        text-align:center;
+        font-size: 18px;
+        color: rgb(255,255,255); 
+    }
+
+/** Box 2 **/
+    .box2{
+        width: 33%;
+        float:right;
+    }
+    .box2 h3{
+        line-height: 70px;
+        font-size: 20px;
+        color: rgb(255,255,255);
+        margin-left: 25%;
+    }
+    .box2 ul{
+        font-size: 18px;
+        margin-left: 30%;
+    }
+    .box2 ul li{
+        padding: 5px;
+    }
+    .box2 ul li a{
+        text-decoration: none;
+        color: rgb(255,255,255);
+    }
