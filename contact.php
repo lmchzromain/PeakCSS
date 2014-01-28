@@ -2,8 +2,10 @@
 	<div id="contact_us"> 
 		<div class="content">
 			<h2> CONTACT US </h2>			
-				<p class="text_contact"> <span> ''</span> A question? A problem? An anomaly?</br>
-				Fill out the form below if you want to get in touch with team. <span>''</span></p>
+
+				<p class="text_contact"> <span><img src="img/guillemet.png" alt="guillemet"/></span> A question? A problem? An anomaly?</br>
+				Fill out the form below if you want to get in touch with team. <span><img src="img/guillemet_end.png" alt="guillement end" /></span></p>
+
 
 				<span class="error"><p><img src="./img/attention_form.png" alt="attention" width="20px"/> 
 					The form has not been sent. Please correct and resubmit the form. Thank you!  </p></span>

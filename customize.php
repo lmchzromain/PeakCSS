@@ -25,7 +25,7 @@
                 <th>BACKGROUND</th>
             </tr>
             <tr>
-                <td><p contenteditable="true" class="example" name="text1">Example</p></td>
+                <td><p contenteditable="true" class="example text" name="text1">Example</p></td>
                 <td>
                     <select class="font" rel="text1">
                         <option>Arial</option>
@@ -36,15 +36,16 @@
                 </td>
                 <td>
                     <select class="size" rel="text1">
-<?php 
-    for($i=10; $i<41; $i++){
-        echo '<option value="'.$i.'">'.$i.' px</option>';
-        $i++;
-    }
-?>
+                        <?php 
+for($i=10; $i<41; $i++){
+    echo '<option value="'.$i.'">'.$i.' px</option>';
+    $i++;
+}
+                        ?>
                     </select>
                 </td>
                 <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="text1"></input></td>
+<<<<<<< HEAD
                 <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" value="0" rel="text1"/>
                     <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" value="0" rel="text1"/><br>
                     <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" value="0" rel="text1"/>
@@ -53,7 +54,7 @@
                 <td><input type="checkbox" class="backgroundColor radius-right" rel="text1"/><span class="before-input radius-left">#</span><input type="text" class="backgroundColor picker radius-right" rel="text1" disabled></input></td>
             </tr>
             <tr>
-                <td><p contenteditable="true" class="example" name="text2">Example</p></td>
+                <td><p contenteditable="true" class="example text" name="text2">Example</p></td>
                 <td>
                     <select class="select" rel="text2">
                         <option>Arial</option>
@@ -98,7 +99,7 @@
                 <th>BACKGROUND</th>
             </tr>
             <tr>
-                <td><input type="button" class="" value="Example" name="button1"></td>
+                <td><input type="button" class="example button" value="Example" name="button1"></td>
                 <td>
                     <select class="font" rel="button1">
                         <option>Arial</option>
@@ -144,7 +145,7 @@
                 <th>BACKGROUND</th>
             </tr>
             <tr>
-                <td><input type="text" class="" value="Example" name="input1"></td>
+                <td><input type="text" class="example input" value="Example" name="input1"></td>
                 <td>
                     <select class="font" rel="input1">
                         <option>Arial</option>
@@ -177,6 +178,120 @@
             </tr>
         </table>
         <input type='button' value="Add a new line" class="add" name="input"/>
-    </div>
-</section>
-<?php require 'footer.php'; ?>
+    </section>
+    <section>
+        <div id="css_generate">
+            <form action="customize.php" method="post">
+                <textarea readonly id="stylecss" name="stylecss"></textarea>
+                <br>
+                <input type="submit" value="Download" />
+            </form>   
+        </div>
+    </section>
+<?php
+if (!empty($_POST)){
+    $stylecss = $_POST['stylecss'];
+    
+    //Création du fichier css
+    $filenamecss = "PeakCSS"; 
+    $opencss = fopen("download/".$filenamecss.".css", "w");
+    fwrite($opencss, $stylecss); 
+    fclose($opencss);
+    
+    $name_tag = array('text','input','button');
+    foreach ($name_tag as $test){
+        preg_match_all('#('.$test.'[0-9]+)#', $stylecss,$tab_{$test});
+        ${$test} = $tab_{$test}[1];  
+    }
+    
+    //Création du fichier html
+    $textehtml="
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset='utf-8'>
+        <title>PeakCSS - Demo</title>
+        <meta name='viewport' content='width=device-width'>
+        <link type='text/css' rel='stylesheet' href='PeakCSS.css'/>
+        <link type='text/css' rel='stylesheet' href='PeakRESET.css'/>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div style='max-width:75%; min-width:800px;margin:auto;position:relative;'>
+			<H1 style='color:#3a85bc; font-size:40px; font-family:Raleway; font-weight:100; text-align:center; margin:50px 0'>PeakCSS</H1>";
+    foreach ($text as $name_class) {
+        $textehtml .=
+            "<p class=".$name_class.">Lorem ipsum</p>
+    			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
+    				<code type='html'>
+    					<span style='color:#3a85bc'>&lt;p</span>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
+    					<span>Lorem ipsum</span>
+    					<span style='color:#3a85bc'>&lt;/p&gt;</span>
+    				</code>
+    			</div>";
+    }
+    foreach ($input as $name_class) {
+        $textehtml .=
+            "<input type='text' class=".$name_class." placeholder='text' />
+    			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
+    				<code type='html'>
+    					<span style='color:#3a85bc'>&lt;input</span>
+    				    <span style='color:#27ae60'>type</span><span style='color:#c0392b'>=\"text\"</span><span style='color:#3a85bc'>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span>
+    					<span style='color:#27ae60'>placeholder</span><span style='color:#c0392b'>=\"text\"</span>
+    					<span style='color:#3a85bc'>/&gt;</span>
+    				</code>
+    			</div>";
+    }
+    foreach ($button as $name_class) {
+        $textehtml .=
+            "<a class=".$name_class." href='#' onclick='return false'>Button</a>
+    			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
+    				<code type='html'>
+    					<span style='color:#3a85bc'>&lt;a</span>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
+    					<span>Link</span>
+    					<span style='color:#3a85bc'>&lt;/a&gt;</span>
+    					<span style='color:#939393'>/* OR */</span>
+    					</br>
+    					<span style='color:#3a85bc'>&lt;button</span>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
+    					<span>Link</span>
+    					<span style='color:#3a85bc'>&lt;/button&gt;</span>
+    					<span style='color:#939393'>/* OR */</span>
+    					</br>
+    				    <span style='color:#3a85bc'>&lt;input</span>
+    				    <span style='color:#27ae60'>type</span><span style='color:#c0392b'>=\"submit\"</span><span style='color:#3a85bc'>
+    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span>
+    					<span style='color:#3a85bc'>/&gt;</span>
+    				</code>
+    			</div>";
+    }
+    $textehtml .= "</div></body></html>";
+    $filenamehtml = "PeakHTML"; 
+    $openhtml = fopen("download/".$filenamehtml.".html", "w");
+    fwrite($openhtml, $textehtml); 
+    fclose($openhtml); 
+    
+    //Zippage des fichiers
+    $zip = new ZipArchive(); 
+    if($zip->open('download/PeakCSS.zip', ZipArchive::CREATE) == TRUE){
+        $zip->addFile('download/PeakHTML.html','PeakHTML.html');
+        $zip->addFile('download/PeakCSS.css','PeakCSS.css');
+        $zip->addFile('download/PeakRESET.css','PeakRESET.css');
+        $zip->close();
+    }else{
+        echo 'Impossible de récupérer le fichier';
+    }    
+    
+    //Téléchargement
+    header('Content-Type: text/plain');
+    header('Content-Disposition: attachment; filename="PeakCSS.zip"');
+    readfile('download/peakCSS.zip');
+    unlink('download/PeakHTML.html');
+    unlink('download/PeakCSS.css');
+    unlink('download/PeakCSS.zip');
+}
+
+require 'footer.php'; ?>
