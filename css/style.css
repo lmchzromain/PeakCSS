@@ -79,7 +79,11 @@ header h1 a{
     font-size: 35px;	
     color: #3a85bc;	
     line-height: 70px;
-    font-weight: 600;
+
+    font-weight: 100;
+}
+header h1 span{    
+    font-weight:bold;
 }
 header nav{
     display:inline-block;
@@ -376,6 +380,9 @@ HOW TO USE
     font-size:20px;
     line-height:30px;
 }
+.text span{
+    font-weight: bold;
+}
 .pic{
     display: inline-block;
     margin-top: 10px;
@@ -617,9 +624,117 @@ QUOTE
 }
 
 /*=========================
+Projet and Team
+==========================*/
+.project_team{
+    width: 100%;
+    height: auto;
+}
+.project_team h3{
+    margin-top: 10px;
+    color:#3f3f3f;
+    font-size:40px;
+    font-weight:300;
+}
+.project_team img{
+    display:inline-block;
+    border-radius:2px;
+        -moz-box-shadow: 0px 1px 10px 0px #969696;
+    -webkit-box-shadow: 0px 1px 10px 0px #969696;
+    -o-box-shadow: 0px 1px 10px 0px #969696;
+    box-shadow: 0px 1px 10px 0px #969696; 
+    margin: 0 auto;
+}
+#explore_2{
+    padding-top:30px;
+    padding-bottom:20px;
+    background-color: #ebebeb;
+    -moz-box-shadow: 0px 1px 5px 0px #606060;
+    -webkit-box-shadow: 0px 1px 5px 0px #606060;
+    -o-box-shadow: 0px 1px 5px 0px #606060;
+    box-shadow: 0px 1px 5px 0px #969606060696;
+}
+#team{
+    margin-top: 40px;
+    width: 100%;
+    height: 400px;
+    position:relative; 
+}
+.member{  
+    position: relative;
+   height: auto;
+   width: 30%;
+   float:left;
+   margin-left: 2.5%; 
+}
+.presentation p{
+    margin: 0 auto;
+     width: 90%;
+     text-align:justify
+}
+.presentation h3{
+    margin-top: 10px;
+    text-align:center;    
+    color:#3f3f3f;
+    font-size:20px;
+    font-weight:bold;
+}
+/*=========================
 FOOTER
 ==========================*/
 footer{
-    background-color: #0c0c0c;
-    height: 230px;
+    background-color: #222;
+    height: 210px;
+    border-top: 2px solid #3a85bc;
 }
+/** Box 1 **/ 
+    .box1{
+        width: 33%;
+        float:left;
+    }    
+    .box1 .inset_text{
+        margin-left: 20%;
+        font-style:none;
+        width: auto;
+        font-size: 35px;
+        line-height: 70px;
+        font-weight:bold;        
+        color: rgba(58,133,188,0.8);
+        text-shadow: rgba(0,0,0,1) 0px 2px 3px;
+    }      
+    .box1 ul{
+        font-size: 18px;
+        margin-left: 26%;
+    }
+    .box1 ul li{
+        padding: 5px;
+    }
+    .box1 ul li a{
+        text-decoration: none;
+        color: rgb(255,255,255);
+    }    
+    .box1 p{
+        padding-top: 55%;
+        text-align:center;
+        font-size: 18px;
+        color: rgb(255,255,255); 
+    }
+    .box1 .about{
+        line-height: 80px;
+        font-size: 25px;
+        color: rgb(255,255,255);
+        margin-left: 25%;
+        font-style: normal;
+    }
+
+    .box1 .ul_about{
+        font-size: 18px;
+        margin-left: 30%;
+    }
+    .box1.ul_about li{
+        padding: 5px;
+    }
+    .box1 .ul_about li a{
+        text-decoration: none;
+        color: rgb(255,255,255);
+    }
