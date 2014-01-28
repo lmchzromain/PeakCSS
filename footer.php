@@ -2,7 +2,7 @@
     <div class="content">
         
         <div class="box1">
-            <h3 class="inset-text">
+            <h3 class="inset_text">
                 PeakCSS           
             </h3>
             <ul>
@@ -13,17 +13,17 @@
             </ul>            
         </div>
         
-        <div class="box_center">
-              <p>  &copy; Copyright 2014 PeakCSS </p>
+        <div class="box1">
+              <p class="copyright">  &copy; Copyright 2014 PeakCSS </p>
         </div>
         
-        <div class="box2">
-             <h3>
+        <div class="box1">
+             <h3 class="about">
                 About US
             </h3>  
-            <ul>
-                <li><a href="index.php"> Team PeakCSS </a></li>
-                <li><a href="explore.php"> The project </a></li>
+            <ul class="ul_about">
+                <li><a href="project_team.php"> Team PeakCSS </a></li>
+                <li><a href="project_team.php"> The project </a></li>
                 <li><a href="customize.php"> Conditions of use </a></li>
             </ul>          
         </div>   
