@@ -11,7 +11,7 @@
     float: left;
     _float: none;  /* Float works in all browsers but IE6 */
     background: #3a85bc;
-    border-bottom: 1px solid #FFFFFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     cursor: pointer;
     line-height: 40px;
     }
@@ -25,16 +25,13 @@
     float: left;
     _float: none; /* Float works in all browsers but IE6 */
     background: #fff;
+    padding:10px 0 20px 0;
     }
     
 /***********************************************************************************************************************
  EXTRA STYLES ADDED FOR MOUSEOVER / ACTIVE EVENTS
 ************************************************************************************************************************/
-
-.on {
-    background: #4870cf;
-    }
+.accordionButton:hover{
+    background-color: #6c8bd3;
+}
     
-.over {
-    background: blue;
-    }

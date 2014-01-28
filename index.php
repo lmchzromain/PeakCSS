@@ -15,7 +15,7 @@ require "header.php";
     <div class="content">
         <h2>How to use ?</h2>
         <div id="select" class="line">
-            <div class="text">
+            <div class="description">
                 <h3>1. Select</h3>
                 <p>Tools PeakCSS will allow you to set up a HTML structure according to your needs. The addition of simple element, in a HTML structure, as of the text, a button or still one fields input contained in a form. In some click your structure will be made!</p>
             </div>
@@ -26,13 +26,13 @@ require "header.php";
         <div id="custom" class="line">
             <div class="pic">
             </div>
-            <div class="text right">
+            <div class="description right">
                 <h3>2. Custom</h3>
                 <p>All the HTML tags beforehand selected can be customizable very easily in some clicks.To be able to optimize the customization most exactly and to answer totally your aims of design. Moreover an overview is available immediately on-line.</p>
             </div>    
         </div>
         <div id="generate" class="line">
-            <div class="text">
+            <div class="description">
                 <h3>3. Generate</h3>
                 <p>After completing two steps detailed above, all settings will be saved in a CSS stylesheet and HTML structure will also be automatically generated in an HTML file according to your choice. All the generated files will then be downloaded and apply directly. </br></br>
                 <span> Now it's your turn ! </span></p>
