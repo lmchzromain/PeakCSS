@@ -666,12 +666,12 @@ Projet and Team
    float:left;
    margin-left: 2.5%; 
 }
-.description p{
+.presentation p{
     margin: 0 auto;
      width: 90%;
      text-align:justify
 }
-.description h3{
+.presentation h3{
     margin-top: 10px;
     text-align:center;    
     color:#3f3f3f;
