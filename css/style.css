@@ -61,13 +61,26 @@ body{margin: auto;position:relative;font-family: 'Raleway', sans-serif;}
     background:#3a85bc;
     color:#FFF;
 }
-
+h2{
+    color:#656565;
+    font-size:45px;
+    font-weight:100;
+    font-style:italic;
+}
+h5{
+    color:#000;
+    font-size:17px;
+    font-weight:100;
+    font-style:italic;
+}
 /******** Header ********/
 header{
     background-color: #fff;
     width: 100%;
-    height: 70px;
+    height: 80px;
     box-shadow:0 1px 1px 0px rgba(0,0,0,0.3);
+    position: relative;
+    z-index:100;
 }
 header h1{
     position: relative;
@@ -78,7 +91,7 @@ header h1{
 header h1 a{
     font-size: 35px;	
     color: #3a85bc;	
-    line-height: 70px;
+    line-height: 80px;
     font-weight: 100;
 }
 header h1 span{
@@ -95,11 +108,11 @@ header nav{
 header ul{
     list-style-type:none;
     text-align:center;
-    height: 70px;
+    height: 80px;
 }
 header ul li{
     display: inline-block;
-    line-height: 70px;
+    line-height: 80px;
     margin: 0 20px 0 20px;
 }
 header ul li a{
@@ -138,6 +151,7 @@ header ul a.active{
     margin-left: 60px;
     margin-top: 32px;
 }
+.choice label, .choice input{cursor: pointer;}
 
 /******** Choice ********/
 .toggle_text{
@@ -156,7 +170,7 @@ header ul a.active{
 .toggle{
     min-height: 100px;
     background: #fff;
-    text-align:center;
+    text-align:left;
 }
 .toggle table{margin-left:4%; margin-top:10px;}
 .toggle table tr td{padding-bottom:25px;}
@@ -168,7 +182,11 @@ header ul a.active{
     padding: 2px 10px 2px 10px;
     text-align:left;
 }
-.toggle table td:first-child{padding: 2px 10px 2px 0; width:200px;}
+.toggle table td:first-child{
+    width:180px;
+    max-width:180px;
+}
+.toggle table td:first-child input{max-width:165px;}
 .toggle table td select{
     padding: 4px 12px;
     margin: 0;
@@ -196,11 +214,27 @@ header ul a.active{
 .radius-right{border-radius: 0 4px 4px 0;}
 .radius-all{border-radius: 4px;}
 span.shadow{margin-bottom:4px; display: inline-block;}
+span.inset{
+    margin: 0;
+    padding: 3px;
+    vertical-align: top;
+    line-height: 16px;
+    height: 18px;
+    padding-right: 8px;
+}
 .toggle table input.shadow{
     width:20px;
     margin-bottom:4px;
     display: inline-block;
     height: 16px;
+}
+.toggle table input[type="checkbox"].shadow{
+    margin: 0;
+    width: 13px;
+    margin-top: 1px;
+}
+.toggle table input.shadow.picker{
+    width:45px;
 }
 .before-input{
     padding: 6px 8px;
@@ -218,18 +252,36 @@ span.shadow{margin-bottom:4px; display: inline-block;}
     margin:0;
     width:70px;
     line-height:20px;
+    background:rgba(240,240,240,0.4);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
-h2{
-    color:#656565;
-    font-size:45px;
-    font-weight:100;
-    font-style:italic;
+.picker:focus{
+    background:#fff;   
 }
-h5{
-    color:#000;
-    font-size:17px;
-    font-weight:100;
-    font-style:italic;
+.toggle .add{
+    font-weight:bold;
+    //text-shadow: 2px 1px 1px #5a5a5a;
+    color: white;
+    background: #3a85bc;
+    border: none;
+    padding: 6px 15px;
+    margin-bottom:20px;
+    margin-left:4%;
+    cursor: pointer;
+    outline:none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.toggle .add:hover{
+    background: #2292e5;
+    box-shadow:3px 3px 1px 1px rgba(150,150,150,0.5);
 }
 /*===============================
 Page de test sur customize2
@@ -557,6 +609,28 @@ input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 
+/*=========================
+Send MAIL
+==========================*/
+.summary_01{
+    background-color: rgba(255,255,255,0.2);
+    color:#ffffff;
+    font-family:'Raleway', sans-serif;
+    font-size: 20px;
+    padding-left: 20%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    margin-bottom: 25px;
+}
+.summary{
+    background-color: rgba(255,255,255,0.2);
+    color:#ffffff;
+    font-family:'Raleway', sans-serif;
+    font-size: 20px;
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
 /*=========================
 QUOTE
 ==========================*/
