@@ -7,7 +7,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>PeakCSS - Home</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width">       
+        
+        <!-- Mise en place du favicon -->
+      			<link rel="icon" type="image/png" href="img/favicon.png" />        
+        
         <?php
             //Regle les problemes de cache sous chrome, ça me casser les burnes (OU PAS)
         $string = 'css/style.css?'.time();
