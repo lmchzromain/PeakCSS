@@ -1,3 +1,11 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="css/test_toggle/style.css" rel="stylesheet" type="text/css" /> 
+    </head>
+
+    <body>
+
 <?php require 'header.php'; ?>
 <div id="choice_box">
     <div class="choice">
@@ -268,3 +276,8 @@
     </section>
 
 <?php require 'footer.php'; ?>
+
+</body>
+</html>
+
+
