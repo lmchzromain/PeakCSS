@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="css/style.css"/>
-        <link type="text/css" rel="stylesheet" href="css/colpick.css"/>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>PeakCSS - Home</title>
-        <meta name="description" content="">
+        <meta name="description" content="PeakCSS is a tools to create and custom your own CSS">
         <meta name="viewport" content="width=device-width">       
-        
-        <!-- Mise en place du favicon -->
-      			<link rel="icon" type="image/png" href="img/favicon.png" />        
-        
+        <link rel="icon" type="image/png" href="img/favicon.png" />        
         <?php
-            //Regle les problemes de cache sous chrome, ça me casser les burnes (OU PAS)
+            //Regle les problemes de cache sous chrome (OU PAS), ça me casser les burnes.
         $string = 'css/style.css?'.time();
         ?>
-<!--        <link type="text/css" rel="stylesheet" href="css/style.css"/>-->
         <link type="text/css" rel="stylesheet" href="<?php echo $string;?>"/>
         <link href="css/test_toggle/style.css" rel="stylesheet" type="text/css" />
         <link type="text/css" rel="stylesheet" href="css/colpick.css"/>
