@@ -86,10 +86,9 @@ header h1{
     position: relative;
     width: auto;
     display: inline-block;
-    line-height:70px;
 }
 header h1 a{
-    font-size: 35px;	
+    font-size: 38px;	
     color: #3a85bc;
     line-height: 80px;
     font-weight: 100;
