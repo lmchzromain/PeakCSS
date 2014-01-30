@@ -25,6 +25,7 @@ require "header.php";
         </div>
         <div id="custom" class="line">
             <div class="pic">
+                <img src="img/custom.png" alt="custom">
             </div>
             <div class="description right">
                 <h3>2. Custom</h3>
