@@ -1,20 +1,18 @@
 <?php REQUIRE 'header.php'; ?>
-<div id="choice_box">
+<div id="banner">
     <div class="choice">
         <form>
-            <label><input type="checkbox" name="text" value="Text"/> Text</label>
-            <label><input type="checkbox" name="button" value="Button"> Button</label>
-			<label><input type="checkbox" name="input" value="Input"> Input</label>
-			<label><input type="checkbox" name="block" value="Block"> Block</label>
-			<label><input type="checkbox" name="table" value="Table"> Table</label>
+            <label><input type="checkbox" name="text" value="Text" checked="checked"/> Text</label>
+            <label><input type="checkbox" name="button" value="Button" checked="checked"/> Button</label>
+			<label><input type="checkbox" name="input" value="Input" checked="checked"/> Input</label>
         </form>
     </div>
 </div>
 <section>
-    <div class="toggle_text">
-        <a href="" class="toggler">Text</a>
+    <div class="accordionButton custom_text">
+        <p>Text</p>
     </div>	
-    <div class="toggle">
+    <div class="accordionContent">
         <table>
             <tr>
                 <th></th>
@@ -52,42 +50,14 @@ for($i=10; $i<41; $i++){
                 </td>
                 <td><input type="checkbox" class="backgroundColor radius-right" rel="text1"/><span class="before-input radius-left">#</span><input type="text" class="backgroundColor picker radius-right" rel="text1" disabled></input></td>
             </tr>
-            <tr>
-                <td><p contenteditable="true" class="example text" name="text2">Example</p></td>
-                <td>
-                    <select class="select" rel="text2">
-                        <option>Arial</option>
-                        <option>Helvetica</option>
-                        <option>Cambria</option>
-                        <option>Times New Roman</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="size" rel="text2">
-<?php 
-    for($i=10; $i<41; $i++){
-        echo '<option value="'.$i.'">'.$i.' px</option>';
-        $i++;
-    }
-?>
-                    </select>
-                </td>
-                <td><span class="before-input radius-left">#</span><input type="text" class="color picker radius-right" rel="text2"></input></td>
-                <td><span class="before-input radius-left shadow">Horizontal</span><input type="text" class="text-shadow horizontal shadow radius-right" value="0" rel="text2"/>
-                    <span class="before-input radius-left shadow">Vertical</span><input type="text" class="text-shadow vertical shadow radius-right" value="0" rel="text2"/><br>
-                    <span class="before-input radius-left shadow">Blur</span><input type="text" class="text-shadow blur shadow radius-right" value="0" rel="text2"/>
-                    <span class="before-input radius-left shadow">#</span><input type="text" class="text-shadow shadow picker radius-right" width="40" rel="text2"></input>
-                </td>
-                <td><input type="checkbox" class="backgroundColor radius-right" rel="text2"/><span class="before-input radius-left">#</span><input type="text" class="backgroundColor picker radius-right" rel="text2" disabled></input></td>
-            </tr>
         </table>
         <input type='button' value="Add a new line" class="add" name="text"/>
     </div>
 
-    <div class="toggle_text">
-        <a href="" class="toggler">Button</a>
+    <div class="accordionButton custom_button">
+        <p>Button</p>
     </div>	
-    <div class="toggle">
+    <div class="accordionContent">
         <table>
             <tr>
                 <th></th>
@@ -130,10 +100,10 @@ for($i=10; $i<41; $i++){
         </table>
         <input type='button' value="Add a new line" class="add" name="button"/>
     </div>
-    <div class="toggle_text">
-        <a href="" class="toggler">Input</a>
+    <div class="accordionButton custom_input">
+        <p>Input</p>
     </div>	
-    <div class="toggle">
+    <div class="accordionContent">
         <table>
             <tr>
                 <th></th>
@@ -293,4 +263,4 @@ if (!empty($_POST)){
     unlink('download/PeakCSS.zip');
 }
 
-require 'footer.php'; ?>
+require 'footer2.php'; ?>

@@ -14,7 +14,7 @@
         <div class="column">
             <ul>
                 <li><a href="project_team.php">Team PeakCSS</a></li>
-                <li><a href="project_team.php">The project</a></li>
+                <li><a href="project_team.php#project">The project</a></li>
                 <li><a href="customize.php">Conditions of use</a></li>
             </ul>          
         </div>   
