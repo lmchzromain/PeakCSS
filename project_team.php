@@ -36,9 +36,8 @@
         <div class="content">        
             <div id="select">
                 <div class="description">
-                    <h3>The project & context</h3>
-                    <p>We are 3 students, BS Degree in Information Technology and the Internet. This project is an open source project, So he is not                         sponsored by a business or for a professional agency. The main objective of this web site is going to be to propose a tool                           allowing to create a base CSS by simplifying the programming thanks to a simplistic interface and without touch the code CSS.</p>
-
+                    <h3 id="project">The project & context</h3>
+                    <p>We are 3 students, BS Degree in Information Technology and the Internet. This project is an open source project, So he's not                         sponsored by a business or for an professional agency. The main objective of this web site is going to be to propose a tool                           allowing to create a base CSS by simplifying the programming thanks to a simplistic interface and without touch the code CSS.</p>
                 </div>
                 <div class="pic right">
                     <img src="img/test_project.png" alt="project">
