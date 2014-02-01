@@ -63,5 +63,5 @@ require "header.php";
     </div>
 </div>
 <?php
-require "footer2.php";
+require "footer.php";
 ?>
