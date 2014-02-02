@@ -241,7 +241,7 @@ if (!empty($_POST)){
     $filenamehtml = "PeakHTML"; 
     $openhtml = fopen("download/".$filenamehtml.".html", "w");
     fwrite($openhtml, $textehtml); 
-    fclose($openhtml); 
+    fclose($openhtml);
     
     //Zippage des fichiers
     $zip = new ZipArchive(); 
@@ -257,7 +257,7 @@ if (!empty($_POST)){
     //Téléchargement
     header('Content-Type: text/plain');
     header('Content-Disposition: attachment; filename="PeakCSS.zip"');
-    readfile('download/peakCSS.zip');
+    readfile('download/PeakCSS.zip');
     unlink('download/PeakHTML.html');
     unlink('download/PeakCSS.css');
     unlink('download/PeakCSS.zip');
