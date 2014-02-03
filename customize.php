@@ -245,25 +245,13 @@ if (!empty($_POST)){
     }
     foreach ($button as $name_class) {
         $textehtml .=
-            "<a class=".$name_class." href='#' onclick='return false'>Button</a>
+            "<button class=".$name_class.">Button</button>
     			<div style='margin:10px 0 75px 0; padding: 9px 14px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;'>
     				<code type='html'>
-    					<span style='color:#3a85bc'>&lt;a</span>
-    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
-    					<span>Link</span>
-    					<span style='color:#3a85bc'>&lt;/a&gt;</span>
-    					<span style='color:#939393'>/* OR */</span>
-    					</br>
     					<span style='color:#3a85bc'>&lt;button</span>
     					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span><span style='color:#3a85bc'>&gt;</span>
-    					<span>Link</span>
+    					<span>Button</span>
     					<span style='color:#3a85bc'>&lt;/button&gt;</span>
-    					<span style='color:#939393'>/* OR */</span>
-    					</br>
-    				    <span style='color:#3a85bc'>&lt;input</span>
-    				    <span style='color:#27ae60'>type</span><span style='color:#c0392b'>=\"submit\"</span><span style='color:#3a85bc'>
-    					<span style='color:#27ae60'>class</span><span style='color:#c0392b'>=\"".$name_class."\"</span>
-    					<span style='color:#3a85bc'>/&gt;</span>
     				</code>
     			</div>";
     }
