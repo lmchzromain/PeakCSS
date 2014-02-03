@@ -71,14 +71,14 @@ h5{
     color:#000;
     font-size:17px;
     font-weight:100;
-    font-style:italic;
+/*    font-style:italic;*/
 }
 /******** Header ********/
 header{
     background-color: #fff;
     width: 100%;
     height: 80px;
-    box-shadow:0 1px 1px 0px rgba(0,0,0,0.3);
+    box-shadow:0 1px 1px rgba(0,0,0,0.3);
     position: relative;
     z-index:100;
 }
@@ -86,10 +86,9 @@ header h1{
     position: relative;
     width: auto;
     display: inline-block;
-    line-height:70px;
 }
 header h1 a{
-    font-size: 35px;	
+    font-size: 38px;	
     color: #3a85bc;
     line-height: 80px;
     font-weight: 100;
@@ -125,28 +124,30 @@ header ul a.active{
     font-weight:400;
 }
 /******** Bar Générale ********/
-#choice_box{
-    background-image: url(../img/back.png);
+#banner{
+    background-image: url(../img/peak-home.jpg);
+    background-position:center -70px;
     width: 100%;
     height: 234px;
 }
 .choice{
     background-color: rgba(243,243,243,0.4);
-    width:742px;
+    width: 450px;
     height:75px;
-    -webkit-border-radius:0px 0px 5px 5px;
-    -moz-border-radius:0px 0px 5px 5px;
-    border-radius:0px 0px 5px 5px;
+    -webkit-border-radius:0 0 5px 5px;
+    -moz-border-radius:0 0 5px 5px;
+    border-radius:0 0 5px 5px;
     margin: auto;
+    text-align:center;
 }
 .choice form{
     font-size: 20px;
     color: white;
 }
-.choice form input{
+.choice form label{
     font-family: 'Raleway', sans-serif;
-    margin-left: 60px;
-    margin-top: 32px;
+    margin: 28px 15px 0 15px;
+    display:inline-block;
 }
 .choice label, .choice input{cursor: pointer;}
 
@@ -164,27 +165,27 @@ header ul a.active{
     font-weight: 400;
     margin-left: 4%;
 }
-.toggle{
-    min-height: 100px;
+.accordionContent{
+/*    min-height: 100px;*/
     background: #fff;
     text-align:left;
 }
-.toggle table{margin-left:4%; margin-top:10px;}
-.toggle table tr td{padding-bottom:25px;}
-.toggle table tr th{
+.accordionContent table{margin-left:4%; margin-top:10px;}
+.accordionContent table tr td{padding-bottom:25px;}
+.accordionContent table tr th{
     padding: 2px 10px 2px 10px;
     color: #333;
 }
-.toggle table td{
+.accordionContent table td{
     padding: 2px 10px 2px 10px;
     text-align:left;
 }
-.toggle table td:first-child{
+.accordionContent table td:first-child{
     width:180px;
     max-width:180px;
 }
-.toggle table td:first-child input{max-width:165px;}
-.toggle table td select{
+.accordionContent table td:first-child input{max-width:165px;}
+.accordionContent table td select{
     padding: 4px 12px;
     margin: 0;
     -webkit-border-radius:4px;
@@ -200,7 +201,7 @@ header ul a.active{
     appearance:none;
     cursor:pointer;
 }
-.toggle table input[type="text"]{
+.accordionContent table input[type="text"]{
     padding: 4px 12px;
     border:1px solid #ccc;
     height: 18px;
@@ -219,18 +220,18 @@ span.inset{
     height: 18px;
     padding-right: 8px;
 }
-.toggle table input.shadow{
+.accordionContent table input.shadow{
     width:20px;
     margin-bottom:4px;
     display: inline-block;
     height: 16px;
 }
-.toggle table input[type="checkbox"].shadow{
+.accordionContent table input[type="checkbox"].shadow{
     margin: 0;
     width: 13px;
     margin-top: 1px;
 }
-.toggle table input.shadow.picker{
+.accordionContent table input.shadow.picker{
     width:45px;
 }
 .before-input{
@@ -259,7 +260,7 @@ span.inset{
 .picker:focus{
     background:#fff;   
 }
-.toggle .add{
+.accordionContent .add{
     font-weight:bold;
     //text-shadow: 2px 1px 1px #5a5a5a;
     color: white;
@@ -276,7 +277,7 @@ span.inset{
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
-.toggle .add:hover{
+.accordionContent .add:hover{
     background: #2292e5;
     box-shadow:3px 3px 1px 1px rgba(150,150,150,0.5);
 }
@@ -359,6 +360,7 @@ span.inset{
 /*===============================
 Page de test sur customize2
 ===============================*/
+/*
 .accordionContent{
     background: #fff;
     text-align:center;
@@ -381,6 +383,7 @@ Page de test sur customize2
 .accordionContent table input.shadow{
     width:20px;
 }
+*/
 /*=========================
 PEAK PHOTO HOME
 ==========================*/
@@ -461,7 +464,7 @@ HOW TO USE
 .description p{
     margin-top: 15px;
     text-align:justify;
-    font-style:italic;
+/*    font-style:italic;*/
     font-weight:200;
     font-size:20px;
     line-height:30px;
@@ -659,11 +662,6 @@ CONTACT
     font-family:'Raleway', sans-serif;
 }
 
-input::-webkit-input-placeholder{color:white;font-family:'Raleway', sans-serif;}
-input:-moz-placeholder{color:white;font-family:'Raleway', sans-serif;}
-textarea::-webkit-input-placeholder{color:white;font-family:'Raleway', sans-serif;}
-textarea:-moz-placeholder{color:white;font-family:'Raleway', sans-serif;}
-
 /*** Verification form ***/
 #contact_us span.error{
     text-align:center;
@@ -678,8 +676,6 @@ textarea:-moz-placeholder{color:white;font-family:'Raleway', sans-serif;}
     position:relative;
     float:left;
 }
-
-
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 textarea::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
@@ -719,8 +715,13 @@ QUOTE
 Projet and Team
 ==========================*/
 .project_team{
-    width: 100%;
-    height: auto;
+    padding-top:30px;
+    padding-bottom:20px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 .project_team h3{
     margin-top: 10px;
@@ -730,45 +731,40 @@ Projet and Team
 }
 .project_team img{
     display:inline-block;
-    border-radius:2px;
-        -moz-box-shadow: 0px 1px 10px 0px #969696;
-    -webkit-box-shadow: 0px 1px 10px 0px #969696;
-    -o-box-shadow: 0px 1px 10px 0px #969696;
-    box-shadow: 0px 1px 10px 0px #969696; 
+    border-radius:5px;
+    -moz-box-shadow: 0 1px 2px #969696;
+    -webkit-box-shadow: 0 1px 2px #969696;
+    -o-box-shadow: 0 1px 2px #969696;
+    box-shadow: 0 1px 2px #3e3e3e;
     margin: 0 auto;
-}
-#explore_2{
-    padding-top:30px;
-    padding-bottom:20px;
-    background-color: #ebebeb;
-    -moz-box-shadow: 0px 1px 5px 0px #606060;
-    -webkit-box-shadow: 0px 1px 5px 0px #606060;
-    -o-box-shadow: 0px 1px 5px 0px #606060;
-    box-shadow: 0px 1px 5px 0px #969606060696;
 }
 #team{
     margin-top: 40px;
     width: 100%;
-    height: 400px;
+    height: auto;
     position:relative; 
 }
 .member{  
     position: relative;
-   height: auto;
-   width: 30%;
-   float:left;
-   margin-left: 2.5%; 
+    height: auto;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: auto 1.5%;
 }
 .presentation p{
     margin: 0 auto;
-     width: 90%;
-     text-align:justify
+    width: 100%;
+    font-size: 16px;
+    line-height:24px;
+    text-align:justify;
 }
 .presentation h3{
-    margin-top: 10px;
-    text-align:center;    
+    margin-top: 15px;
+    text-align:left;    
     color:#3f3f3f;
     font-size:20px;
+    line-height:20px;
     font-weight:bold;
 }
 /*=========================
@@ -776,57 +772,45 @@ FOOTER
 ==========================*/
 footer{
     background-color: #222;
-    height: 210px;
-    border-top: 2px solid #3a85bc;
+    height: 240px;
+    padding-top:50px;
+    box-shadow: inset 0 1px 1px black;
 }
-/** Box 1 **/ 
-    .box1{
-        width: 33%;
-        float:left;
-    }    
-    .box1 .inset_text{
-        margin-left: 20%;
-        font-style:none;
-        width: auto;
-        font-size: 35px;
-        line-height: 70px;
-        font-weight:bold;        
-        color: rgba(58,133,188,0.8);
-        text-shadow: rgba(0,0,0,1) 0px 2px 3px;
-    }      
-    .box1 ul{
-        font-size: 18px;
-        margin-left: 26%;
-    }
-    .box1 ul li{
-        padding: 5px;
-    }
-    .box1 ul li a{
-        text-decoration: none;
-        color: rgb(255,255,255);
-    }    
-    .box1 p{
-        padding-top: 55%;
-        text-align:center;
-        font-size: 18px;
-        color: rgb(255,255,255); 
-    }
-    .box1 .about{
-        line-height: 80px;
-        font-size: 25px;
-        color: rgb(255,255,255);
-        margin-left: 25%;
-        font-style: normal;
-    }
-
-    .box1 .ul_about{
-        font-size: 18px;
-        margin-left: 30%;
-    }
-    .box1.ul_about li{
-        padding: 5px;
-    }
-    .box1 .ul_about li a{
-        text-decoration: none;
-        color: rgb(255,255,255);
-    }
+.column{
+    width:33%;
+    height:80px;
+    display:inline-block;
+    position:relative;
+}
+.column ul{
+    margin-left: 40%;
+    top:0;
+    position:absolute;
+}
+.column ul li{
+    height: 30px;
+}
+.column ul li a{
+    color: #919191;
+    font-size: 16px;
+    line-height: 30px;
+}
+.column h2{
+    text-align:center;
+    font-size: 35px;
+    font-style:normal;
+    color: #676767;
+    text-shadow: 0px 1px 1px #151515;
+    font-weight: 100;
+    margin-top:30px;
+}
+.column h2 span{
+    font-weight:bold;
+    color: #464646;
+}
+.bottom-footer{
+    width:100%;
+    margin-top: 70px;
+    text-align:center;
+    color: #676767;
+}
