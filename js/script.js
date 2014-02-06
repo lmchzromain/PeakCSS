@@ -48,7 +48,6 @@ $(document).ready(function(){
                 var test = $(this).attr('style');
                 test = test.replace(/;/g, ';\n');
                 $('#stylecss').val($('#stylecss').val()+'.'+$(this).attr('name')+'{\n '+test+'}\n\n');
-                console.log(test);
             };
         });
     },500); 

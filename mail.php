@@ -5,12 +5,13 @@
                 
                 $mail = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
                 $regex = "/^[a-z]+([ \-']?[a-z]+[ \-']?[a-z]+[ \-']?)[a-z]+$/i";
+                $regex_2 ="/^[A-Za-z0-9 .'?!,@$#\-_]/";
                 
                 
                 // Vérification des champs non vide 
                 if(!empty($_POST['name']) && !empty($_POST['mail']) && !empty($_POST['why']) && !empty($_POST['message_area'])){
                     // Vérification des regex sur les champs en question
-                    if(preg_match($mail, $_POST['mail']) && preg_match($regex, $_POST['name']) && preg_match($regex, $_POST['why']) && preg_match($regex, $_POST['message_area'])){
+                    if(preg_match($mail, $_POST['mail']) && preg_match($regex, $_POST['name']) && preg_match($regex, $_POST['why'])  && preg_match($regex_2, $_POST['message_area'])){
                         //Préparation de l'envoie du mail
                         if(isset($_POST['send'])){
                             
@@ -47,7 +48,9 @@
                                   <p> The subject : '.$_POST['why'].'</p>
                                   <p> Your message : '.$_POST['message_area'].'</p>
                               </div>'; 
-                    }
+                    }else{
+                    echo "<script>alert(\"Un problème à été détecté, veuillez activer le javascript de votre naviguateur\")</script>"; 
+                } 
                 }else{
                     echo "<script>alert(\"Un problème à été détecté, veuillez activer le javascript de votre naviguateur\")</script>"; 
                 }    
