@@ -263,4 +263,4 @@ if (!empty($_POST)){
     unlink('download/PeakCSS.zip');
 }
 
-require 'footer.php'; ?>
+require 'footer2.php'; ?>
