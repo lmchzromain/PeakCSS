@@ -15,7 +15,8 @@
                         //Préparation de l'envoie du mail
                         if(isset($_POST['send'])){                            
                             // Préparation de l'en-tête du mail reçu
-                            $to = "mathieu.dou@gmail.com";
+                            $to = "lemoine.simon.perso@gmail.com";
+//                            $to = "mathieu.dou@gmail.com";
                             $sujet = 'PeakCSS contact form ';
                             $message = 'From : '.$_POST['mail']."\r\n";
                 
