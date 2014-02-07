@@ -675,6 +675,7 @@ CONTACT
     display:inline;
     position:relative;
     float:left;
+	display: none;
 }
 input::-webkit-input-placeholder{color:white;font-family: 'Raleway', sans-serif;}
 input:-moz-placeholder{color:white;font-family: 'Raleway', sans-serif;}

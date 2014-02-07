@@ -54,7 +54,7 @@ $(document).ready(function(){
 
     
     /*====================================================
-				Gestion du formualaires
+				Gestion du formulaires
 	====================================================*/
     
     /* Fonction de changement CSS */
@@ -80,12 +80,12 @@ $(document).ready(function(){
             $(".error").css({display : 'inline'});		
             display_error($('#name'));		            
             return false;
-        }else if(!$("#name").val().match(/^[a-z]+([ \-']?[a-z]+[ \-']?[a-z]+[ \-']?)[a-z]+$/i)){
+        }else if(!$("#name").val().match(/^[a-zA-Z_-\s][^0-9(\)!]{2,13}$/i)){
             $(".error").css({display : 'inline'});		
             display_error($('#name'));	              	
             return false;
         }else{	            	
-            $("#name").css({border : '2px solid white'});
+            $("#name").css({border : '2px solid white', background: 'none' });			
             return true;
         }               	
     });               	
@@ -97,12 +97,12 @@ $(document).ready(function(){
             $(".error").css({display : 'inline'});
             display_error($('#mail'));
             return false;
-        }else if(!$("#mail").val().match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]{2,}[.][a-zA-Z]{2,4}$/)){
+        }else if(!$("#mail").val().match(/[a-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[a-z](?:[a-z]*[a-z])?\.)+(?:[A-Z]{2}|com|org|net|fr)/)){
             $(".error").css({display : 'inline'});
             display_error($('#mail'));
             return false;
         }else{	            	
-            $("#mail").css({border : '2px solid white'});
+            $("#mail").css({border : '2px solid white',background: 'none'});
             return true;
         }               	
     });
@@ -113,12 +113,12 @@ $(document).ready(function(){
             $(".error").css({display : 'inline'});
             display_error($('#why'));
             return false;
-        }else if(!$("#why").val().match(/^[a-z]+([ \-']?[a-z]+[ \-']?[a-z]+[ \-']?)[a-z]+$/i)){
+        }else if(!$("#why").val().match(/^[a-zA-Z0-9-!]+$/i)){
             $(".error").css({display : 'inline'});
             display_error($('#why'));
             return false;
         }else{	            	
-            $("#why").css({border : '2px solid white'});
+            $("#why").css({border : '2px solid white',background: 'none'});
             return true;
         }               	
     });  
@@ -129,12 +129,13 @@ $(document).ready(function(){
             $(".error").css({display : 'inline'});
             display_error($('.text_besoin'));
             return false;
-        }else if($(".text_besoin").val().match(/^[^a-z0-9._-]$/i)){
+        }else 
+		if($(".text_besoin").val().match(/^[a-z0-9_-!\s]{,255}$/)){
             $(".error").css({display : 'inline'});
             display_error($('.text_besoin'));
             return false;
         }else{	            	
-            $(".text_besoin").css({border : '2px solid white'});
+            $(".text_besoin").css({border : '2px solid white',background: 'none'});
             return true;
         }               	
     });
