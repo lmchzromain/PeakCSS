@@ -3,20 +3,20 @@
         <div class="content">            
             <?php
                 
-                $mail = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
-                $regex = "/^[a-z]+([ \-']?[a-z]+[ \-']?[a-z]+[ \-']?)[a-z]+$/i";
-                $regex_2 ="/^[A-Za-z0-9 .'?!,@$#\-_]/";
+                $regex_name = '/^[a-zA-Z_-\s][^0-9(\)!]{2,13}$/i';                
+                $regex_mail = "/[a-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[a-z](?:[a-z]*[a-z])?\.)+(?:[A-Z]{2}|com|org|net|fr)/"; 
+                $regex_why = "/^[a-zA-Z0-9-!]+$/i";                
                 
                 
                 // Vérification des champs non vide 
                 if(!empty($_POST['name']) && !empty($_POST['mail']) && !empty($_POST['why']) && !empty($_POST['message_area'])){
                     // Vérification des regex sur les champs en question
-                    if(preg_match($mail, $_POST['mail']) && preg_match($regex, $_POST['name']) && preg_match($regex, $_POST['why'])  && preg_match($regex_2, $_POST['message_area'])){
+                    if(preg_match($regex_name, $_POST['name']) && preg_match($regex_mail, $_POST['mail']) && preg_match($regex_why, $_POST['why'])){
                         //Préparation de l'envoie du mail
-                        if(isset($_POST['send'])){
-                            
+                        if(isset($_POST['send'])){                            
                             // Préparation de l'en-tête du mail reçu
-                            $to = "mathieu.dou@gmail.com";
+                            $to = "lemoine.simon.perso@gmail.com";
+//                            $to = "mathieu.dou@gmail.com";
                             $sujet = 'PeakCSS contact form ';
                             $message = 'From : '.$_POST['mail']."\r\n";
                 
@@ -48,11 +48,12 @@
                                   <p> The subject : '.$_POST['why'].'</p>
                                   <p> Your message : '.$_POST['message_area'].'</p>
                               </div>'; 
-                    }else{
-                    echo "<script>alert(\"Un problème à été détecté, veuillez activer le javascript de votre naviguateur\")</script>"; 
-                } 
+                    }else{						
+						header('location:contact.php');
+                	} 
                 }else{
-                    echo "<script>alert(\"Un problème à été détecté, veuillez activer le javascript de votre naviguateur\")</script>"; 
+                        header('location:contact.php');
+                    
                 }    
             ?>    
                 
